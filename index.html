@@ -795,12 +795,7 @@
     }
     .transfer-car-img:hover { opacity: 1; }
 
-    /* ─── TRADUCTOR ─── */
-    #google_translate_element { display: none; }
-    .goog-te-banner-frame { display: none !important; }
-    .skiptranslate { display: none !important; }
-    body { top: 0 !important; }
-
+    /* ─── SELECTOR DE IDIOMA ─── */
     .lang-switcher {
       position: fixed;
       bottom: 1.75rem;
@@ -874,9 +869,9 @@
 <nav id="nav">
   <a href="#" class="nav-logo">
     Transfer Buenos Aires
-    <span>Tours Privados y Traslados</span>
+    <span data-es="Tours Privados y Traslados" data-en="Private Tours &amp; Transfers" data-fr="Visites Privées et Transferts">Tours Privados y Traslados</span>
   </a>
-  <a href="https://wa.me/5491144742207?text=Hola%2C%20quiero%20reservar%20un%20tour%20con%20Transfer%20Buenos%20Aires%20City" target="_blank" rel="noopener" class="nav-cta">Reservar un Tour</a>
+  <a href="https://wa.me/5491144742207?text=Hola%2C%20quiero%20reservar%20un%20tour%20con%20Transfer%20Buenos%20Aires%20City" target="_blank" rel="noopener" class="nav-cta" data-es="Reservar un Tour" data-en="Book a Tour" data-fr="Réserver un Tour">Reservar un Tour</a>
 </nav>
 
 <!-- HERO -->
@@ -888,12 +883,12 @@
   </div>
   <div class="hero-overlay"></div>
   <div class="hero-content">
-    <span class="hero-eyebrow">Buenos Aires · Experiencias Privadas</span>
-    <h1 class="hero-title">
+    <span class="hero-eyebrow" data-es="Buenos Aires · Experiencias Privadas" data-en="Buenos Aires · Private Experiences" data-fr="Buenos Aires · Expériences Privées">Buenos Aires · Experiencias Privadas</span>
+    <h1 class="hero-title" data-es="Descubrí el <em>Alma</em><br>de Buenos Aires" data-en="Discover the <em>Soul</em><br>of Buenos Aires" data-fr="Découvrez l'<em>Âme</em><br>de Buenos Aires">
       Descubrí el <em>Alma</em><br>de Buenos Aires
     </h1>
-    <p class="hero-sub">Tours privados conducidos personalmente por su servidor.<br>Seis años creando experiencias inolvidables en la ciudad.</p>
-    <a href="https://wa.me/5491144742207?text=Hola%2C%20quiero%20reservar%20un%20tour%20con%20Transfer%20Buenos%20Aires%20City" target="_blank" rel="noopener" class="btn-primary">Reservar mi Tour</a>
+    <p class="hero-sub" data-es="Tours privados conducidos personalmente por su servidor.<br>Seis años creando experiencias inolvidables en la ciudad." data-en="Private tours personally guided by yours truly.<br>Six years creating unforgettable experiences in the city." data-fr="Visites privées guidées personnellement par votre humble serviteur.<br>Six années à créer des expériences inoubliables dans la ville.">Tours privados conducidos personalmente por su servidor.<br>Seis años creando experiencias inolvidables en la ciudad.</p>
+    <a href="https://wa.me/5491144742207?text=Hola%2C%20quiero%20reservar%20un%20tour%20con%20Transfer%20Buenos%20Aires%20City" target="_blank" rel="noopener" class="btn-primary" data-es="Reservar mi Tour" data-en="Book My Tour" data-fr="Réserver Mon Tour">Reservar mi Tour</a>
   </div>
   <div class="hero-dots" id="heroDots">
     <button class="hero-dot active" aria-label="Slide 1"></button>
@@ -909,32 +904,32 @@
 <!-- TOURS -->
 <section id="tours">
   <div class="section-inner">
-    <span class="section-eyebrow fade-up">Nuestras Experiencias</span>
-    <h2 class="section-title fade-up delay-1">Tours Privados<br>Hechos para <em style="font-style:italic;color:var(--gold-light)">Vos</em></h2>
+    <span class="section-eyebrow fade-up" data-es="Nuestras Experiencias" data-en="Our Experiences" data-fr="Nos Expériences">Nuestras Experiencias</span>
+    <h2 class="section-title fade-up delay-1" data-es="Tours Privados<br>Hechos para <em style='font-style:italic;color:var(--gold-light)'>Vos</em>" data-en="Private Tours<br>Made for <em style='font-style:italic;color:var(--gold-light)'>You</em>" data-fr="Visites Privées<br>Conçues pour <em style='font-style:italic;color:var(--gold-light)'>Vous</em>">Tours Privados<br>Hechos para <em style="font-style:italic;color:var(--gold-light)">Vos</em></h2>
     <div class="tour-pillars fade-up delay-2">
 
       <div class="tour-pillar">
         <span class="pillar-icon">
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z"/></svg>
         </span>
-        <strong class="pillar-label">100% Privado</strong>
-        <span class="pillar-text">Solo tu grupo. Sin extraños, sin horarios de terceros.</span>
+        <strong class="pillar-label" data-es="100% Privado" data-en="100% Private" data-fr="100% Privé">100% Privado</strong>
+        <span class="pillar-text" data-es="Solo tu grupo. Sin extraños, sin horarios de terceros." data-en="Just your group. No strangers, no third-party schedules." data-fr="Seulement votre groupe. Sans inconnus, sans horaires imposés par des tiers.">Solo tu grupo. Sin extraños, sin horarios de terceros.</span>
       </div>
 
       <div class="tour-pillar">
         <span class="pillar-icon">
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9.594 3.94c.09-.542.56-.94 1.11-.94h2.593c.55 0 1.02.398 1.11.94l.213 1.281c.063.374.313.686.645.87.074.04.147.083.22.127.325.196.72.257 1.075.124l1.217-.456a1.125 1.125 0 011.37.49l1.296 2.247a1.125 1.125 0 01-.26 1.431l-1.003.827c-.293.241-.438.613-.43.992a7.723 7.723 0 010 .255c-.008.378.137.75.43.991l1.004.827c.424.35.534.955.26 1.43l-1.298 2.247a1.125 1.125 0 01-1.369.491l-1.217-.456c-.355-.133-.75-.072-1.076.124a6.47 6.47 0 01-.22.128c-.331.183-.581.495-.644.869l-.213 1.281c-.09.543-.56.94-1.11.94h-2.594c-.55 0-1.019-.398-1.11-.94l-.213-1.281c-.062-.374-.312-.686-.644-.87a6.52 6.52 0 01-.22-.127c-.325-.196-.72-.257-1.076-.124l-1.217.456a1.125 1.125 0 01-1.369-.49l-1.297-2.247a1.125 1.125 0 01.26-1.431l1.004-.827c.292-.24.437-.613.43-.991a6.932 6.932 0 010-.255c.007-.38-.138-.751-.43-.992l-1.004-.827a1.125 1.125 0 01-.26-1.43l1.297-2.247a1.125 1.125 0 011.37-.491l1.216.456c.356.133.751.072 1.076-.124.072-.044.146-.086.22-.128.332-.183.582-.495.644-.869l.214-1.28z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
         </span>
-        <strong class="pillar-label">A tu Medida</strong>
-        <span class="pillar-text">Ritmo, paradas y recorrido diseñados para vos.</span>
+        <strong class="pillar-label" data-es="A tu Medida" data-en="Tailored to You" data-fr="Sur Mesure">A tu Medida</strong>
+        <span class="pillar-text" data-es="Ritmo, paradas y recorrido diseñados para vos." data-en="Pace, stops, and route designed around you." data-fr="Rythme, arrêts et itinéraire conçus pour vous.">Ritmo, paradas y recorrido diseñados para vos.</span>
       </div>
 
       <div class="tour-pillar">
         <span class="pillar-icon">
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253M3 12a8.959 8.959 0 011.157-4.418m0 0A11.953 11.953 0 0112 10.5c2.998 0 5.74-1.1 7.843-2.918"/></svg>
         </span>
-        <strong class="pillar-label notranslate" data-es="Su Servidor de Guía" data-en="Your Guide" data-fr="Votre Guide">Su Servidor de Guía</strong>
-        <span class="pillar-text">Cada tour lo conduzco yo personalmente — sin intermediarios, sin sorpresas.</span>
+        <strong class="pillar-label" data-es="Su Servidor de Guía" data-en="Your Guide" data-fr="Votre Guide">Su Servidor de Guía</strong>
+        <span class="pillar-text" data-es="Cada tour lo conduzco yo personalmente — sin intermediarios, sin sorpresas." data-en="Every tour is personally guided by me — no intermediaries, no surprises." data-fr="Chaque visite est menée personnellement par moi — sans intermédiaires, sans surprises.">Cada tour lo conduzco yo personalmente — sin intermediarios, sin sorpresas.</span>
       </div>
 
     </div>
@@ -945,17 +940,17 @@
       <article class="tour-card fade-up">
         <div class="tour-img img-city"></div>
         <div class="tour-body">
-          <span class="tour-badge">4 Horas · Privado</span>
+          <span class="tour-badge" data-es="4 Horas · Privado" data-en="4 Hours · Private" data-fr="4 Heures · Privé">4 Horas · Privado</span>
           <h3 class="tour-name">City Tour<br>Buenos Aires</h3>
-          <p class="tour-desc">Recorrido por los barrios más icónicos de la ciudad: Plaza de Mayo, La Boca, San Telmo, Puerto Madero y Recoleta. Historia, arquitectura y cultura en una experiencia de media jornada.</p>
+          <p class="tour-desc" data-es="Recorrido por los barrios más icónicos de la ciudad: Plaza de Mayo, La Boca, San Telmo, Puerto Madero y Recoleta. Historia, arquitectura y cultura en una experiencia de media jornada." data-en="A journey through the city's most iconic neighborhoods: Plaza de Mayo, La Boca, San Telmo, Puerto Madero, and Recoleta. History, architecture, and culture in a half-day experience." data-fr="Un parcours à travers les quartiers les plus emblématiques de la ville : Plaza de Mayo, La Boca, San Telmo, Puerto Madero et Recoleta. Histoire, architecture et culture en une demi-journée.">Recorrido por los barrios más icónicos de la ciudad: Plaza de Mayo, La Boca, San Telmo, Puerto Madero y Recoleta. Historia, arquitectura y cultura en una experiencia de media jornada.</p>
           <div class="tour-footer">
             <div class="tour-price">
               <small style="display:block;font-family:var(--sans);font-size:0.65rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--white-dim);margin-bottom:0.15rem;">USD</small>
               200
-              <small style="display:block;font-family:var(--sans);font-size:0.65rem;color:var(--white-dim);margin-top:0.2rem;">Max. 4 personas</small>
-              <small style="display:block;font-family:var(--sans);font-size:0.62rem;color:var(--white-dim);margin-top:0.2rem;">Efectivo (Cash) · Tarjeta +12%</small>
+              <small style="display:block;font-family:var(--sans);font-size:0.65rem;color:var(--white-dim);margin-top:0.2rem;" data-es="Max. 4 personas" data-en="Max. 4 people" data-fr="Max. 4 personnes">Max. 4 personas</small>
+              <small style="display:block;font-family:var(--sans);font-size:0.62rem;color:var(--white-dim);margin-top:0.2rem;" data-es="Efectivo (Cash) · Tarjeta +12%" data-en="Cash · Credit Card +12%" data-fr="Espèces · Carte de Crédit +12%">Efectivo (Cash) · Tarjeta +12%</small>
             </div>
-            <a href="https://wa.me/5491144742207?text=Hola%2C%20quiero%20reservar%20el%20City%20Tour%20Buenos%20Aires%20%28USD%20200%29" target="_blank" rel="noopener" class="btn-tour">Reservar este Tour</a>
+            <a href="https://wa.me/5491144742207?text=Hola%2C%20quiero%20reservar%20el%20City%20Tour%20Buenos%20Aires%20%28USD%20200%29" target="_blank" rel="noopener" class="btn-tour" data-es="Reservar este Tour" data-en="Book This Tour" data-fr="Réserver ce Tour">Reservar este Tour</a>
           </div>
         </div>
       </article>
@@ -964,19 +959,19 @@
       <article class="tour-card fade-up delay-1">
         <div class="tour-img img-tigre"></div>
         <div class="tour-body">
-          <span class="tour-badge">Medio Día · Privado</span>
+          <span class="tour-badge" data-es="Medio Día · Privado" data-en="Half Day · Private" data-fr="Demi-journée · Privé">Medio Día · Privado</span>
           <h3 class="tour-name">Tour Tigre<br>& San Isidro</h3>
-          <p class="tour-desc">Escapate de la ciudad hacia los canales laberínticos del Delta del Tigre. Una excursión privada que termina en la catedral de San Isidro.</p>
-          <p class="tour-includes">Incluye transfers y paseo en lancha colectiva.</p>
+          <p class="tour-desc" data-es="Escapate de la ciudad hacia los canales laberínticos del Delta del Tigre. Una excursión privada que termina en la catedral de San Isidro." data-en="Escape the city to the labyrinthine channels of the Tigre Delta. A private excursion that ends at the San Isidro cathedral." data-fr="Échappez-vous de la ville vers les canaux labyrinthiques du Delta du Tigre. Une excursion privée qui se termine à la cathédrale de San Isidro.">Escapate de la ciudad hacia los canales laberínticos del Delta del Tigre. Una excursión privada que termina en la catedral de San Isidro.</p>
+          <p class="tour-includes" data-es="Incluye transfers y paseo en lancha colectiva." data-en="Includes transfers and a shared boat ride." data-fr="Comprend les transferts et une promenade en bateau collectif.">Incluye transfers y paseo en lancha colectiva.</p>
           <div class="tour-footer">
             <div class="tour-price">
               <small style="display:block;font-family:var(--sans);font-size:0.65rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--white-dim);margin-bottom:0.15rem;">USD</small>
               350
-              <small style="display:block;font-family:var(--sans);font-size:0.6rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--white-dim);margin-top:0.2rem;">Base doble</small>
-              <small style="display:block;font-family:var(--sans);font-size:0.65rem;color:var(--white-dim);margin-top:0.2rem;">Max. 4 personas</small>
-              <small style="display:block;font-family:var(--sans);font-size:0.62rem;color:var(--white-dim);margin-top:0.2rem;">Efectivo (Cash) · Tarjeta +12%</small>
+              <small style="display:block;font-family:var(--sans);font-size:0.6rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--white-dim);margin-top:0.2rem;" data-es="Base doble" data-en="Double base" data-fr="Base double">Base doble</small>
+              <small style="display:block;font-family:var(--sans);font-size:0.65rem;color:var(--white-dim);margin-top:0.2rem;" data-es="Max. 4 personas" data-en="Max. 4 people" data-fr="Max. 4 personnes">Max. 4 personas</small>
+              <small style="display:block;font-family:var(--sans);font-size:0.62rem;color:var(--white-dim);margin-top:0.2rem;" data-es="Efectivo (Cash) · Tarjeta +12%" data-en="Cash · Credit Card +12%" data-fr="Espèces · Carte de Crédit +12%">Efectivo (Cash) · Tarjeta +12%</small>
             </div>
-            <a href="https://wa.me/5491144742207?text=Hola%2C%20quiero%20reservar%20el%20Tour%20Tigre%20y%20San%20Isidro%20%28USD%20350%29" target="_blank" rel="noopener" class="btn-tour">Reservar este Tour</a>
+            <a href="https://wa.me/5491144742207?text=Hola%2C%20quiero%20reservar%20el%20Tour%20Tigre%20y%20San%20Isidro%20%28USD%20350%29" target="_blank" rel="noopener" class="btn-tour" data-es="Reservar este Tour" data-en="Book This Tour" data-fr="Réserver ce Tour">Reservar este Tour</a>
           </div>
         </div>
       </article>
@@ -985,18 +980,18 @@
       <article class="tour-card fade-up delay-2">
         <div class="tour-img img-gaucho"></div>
         <div class="tour-body">
-          <span class="tour-badge">Día Completo · Asado Incluido</span>
-          <h3 class="tour-name">Gaucho Day<br>en la Estancia</h3>
-          <p class="tour-desc">Adentrate en el campo argentino. Una estancia gaucha tradicional te recibe con cabalgatas, música folklórica y un asado a las brasas — una experiencia única e irrepetible.</p>
+          <span class="tour-badge" data-es="Día Completo · Asado Incluido" data-en="Full Day · Asado Included" data-fr="Journée Complète · Asado Inclus">Día Completo · Asado Incluido</span>
+          <h3 class="tour-name" data-es="Gaucho Day<br>en la Estancia" data-en="Gaucho Day<br>at the Estancia" data-fr="Gaucho Day<br>à l'Estancia">Gaucho Day<br>en la Estancia</h3>
+          <p class="tour-desc" data-es="Adentrate en el campo argentino. Una estancia gaucha tradicional te recibe con cabalgatas, música folklórica y un asado a las brasas — una experiencia única e irrepetible." data-en="Venture into the Argentine countryside. A traditional gaucho estancia welcomes you with horseback rides, folk music, and asado grilled over open flame — a unique, once-in-a-lifetime experience." data-fr="Aventurez-vous dans la campagne argentine. Une estancia gaucha traditionnelle vous accueille avec des balades à cheval, de la musique folklorique et un asado grillé au feu de bois — une expérience unique et inoubliable.">Adentrate en el campo argentino. Una estancia gaucha tradicional te recibe con cabalgatas, música folklórica y un asado a las brasas — una experiencia única e irrepetible.</p>
           <div class="tour-footer">
             <div class="tour-price">
               <small style="display:block;font-family:var(--sans);font-size:0.65rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--white-dim);margin-bottom:0.15rem;">USD</small>
               550
-              <small style="display:block;font-family:var(--sans);font-size:0.6rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--white-dim);margin-top:0.2rem;">Base doble</small>
-              <small style="display:block;font-family:var(--sans);font-size:0.65rem;color:var(--white-dim);margin-top:0.2rem;">Max. 4 personas</small>
-              <small style="display:block;font-family:var(--sans);font-size:0.62rem;color:var(--white-dim);margin-top:0.2rem;">Efectivo (Cash) · Tarjeta +12%</small>
+              <small style="display:block;font-family:var(--sans);font-size:0.6rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--white-dim);margin-top:0.2rem;" data-es="Base doble" data-en="Double base" data-fr="Base double">Base doble</small>
+              <small style="display:block;font-family:var(--sans);font-size:0.65rem;color:var(--white-dim);margin-top:0.2rem;" data-es="Max. 4 personas" data-en="Max. 4 people" data-fr="Max. 4 personnes">Max. 4 personas</small>
+              <small style="display:block;font-family:var(--sans);font-size:0.62rem;color:var(--white-dim);margin-top:0.2rem;" data-es="Efectivo (Cash) · Tarjeta +12%" data-en="Cash · Credit Card +12%" data-fr="Espèces · Carte de Crédit +12%">Efectivo (Cash) · Tarjeta +12%</small>
             </div>
-            <a href="https://wa.me/5491144742207?text=Hola%2C%20quiero%20reservar%20el%20Gaucho%20Day%20en%20la%20Estancia%20%28USD%20550%29" target="_blank" rel="noopener" class="btn-tour">Reservar este Tour</a>
+            <a href="https://wa.me/5491144742207?text=Hola%2C%20quiero%20reservar%20el%20Gaucho%20Day%20en%20la%20Estancia%20%28USD%20550%29" target="_blank" rel="noopener" class="btn-tour" data-es="Reservar este Tour" data-en="Book This Tour" data-fr="Réserver ce Tour">Reservar este Tour</a>
           </div>
         </div>
       </article>
@@ -1008,21 +1003,21 @@
 <!-- POR QUÉ ELEGIRNOS -->
 <section id="why">
   <div class="section-inner">
-    <span class="section-eyebrow fade-up">Por Qué Elegirnos</span>
-    <h2 class="section-title fade-up delay-1">Seis Años de<br>Servicios <em style="font-style:italic;color:var(--gold-light)">Premium</em></h2>
+    <span class="section-eyebrow fade-up" data-es="Por Qué Elegirnos" data-en="Why Choose Us" data-fr="Pourquoi Nous Choisir">Por Qué Elegirnos</span>
+    <h2 class="section-title fade-up delay-1" data-es="Seis Años de<br>Servicios <em style='font-style:italic;color:var(--gold-light)'>Premium</em>" data-en="Six Years of<br><em style='font-style:italic;color:var(--gold-light)'>Premium</em> Service" data-fr="Six Années de<br>Service <em style='font-style:italic;color:var(--gold-light)'>Premium</em>">Seis Años de<br>Servicios <em style="font-style:italic;color:var(--gold-light)">Premium</em></h2>
     <div class="gold-rule fade-up delay-2"></div>
     <div class="why-grid">
 
       <div class="why-card fade-up">
         <span class="why-icon">⟡</span>
-        <h3 class="why-title">Puntualidad y Seguridad</h3>
-        <p class="why-text">Llego a tiempo, siempre. Soy conductor profesional habilitado, comprometido con tu comodidad y seguridad en cada trayecto por Buenos Aires.</p>
+        <h3 class="why-title" data-es="Puntualidad y Seguridad" data-en="Punctuality &amp; Safety" data-fr="Ponctualité et Sécurité">Puntualidad y Seguridad</h3>
+        <p class="why-text" data-es="Llego a tiempo, siempre. Soy conductor profesional habilitado, comprometido con tu comodidad y seguridad en cada trayecto por Buenos Aires." data-en="I arrive on time, always. I'm a licensed professional driver, committed to your comfort and safety on every ride through Buenos Aires." data-fr="J'arrive à l'heure, toujours. Je suis un chauffeur professionnel agréé, engagé pour votre confort et votre sécurité à chaque trajet dans Buenos Aires.">Llego a tiempo, siempre. Soy conductor profesional habilitado, comprometido con tu comodidad y seguridad en cada trayecto por Buenos Aires.</p>
       </div>
 
       <div class="why-card fade-up delay-1">
         <span class="why-icon">◈</span>
-        <h3 class="why-title">Múltiples Idiomas</h3>
-        <p class="why-text notranslate" data-es="Hablo inglés y francés con fluidez — para que cada historia, anécdota y recomendación llegue exactamente como fue pensada." data-en="I speak fluent English and French — so that every story, anecdote, and recommendation comes through exactly as intended." data-fr="Je parle couramment anglais et français — pour que chaque histoire, anecdote et recommandation passe exactement comme prévu.">Hablo inglés y francés con fluidez — para que cada historia, anécdota y recomendación llegue exactamente como fue pensada.</p>
+        <h3 class="why-title" data-es="Múltiples Idiomas" data-en="Multiple Languages" data-fr="Plusieurs Langues">Múltiples Idiomas</h3>
+        <p class="why-text" data-es="Hablo inglés y francés con fluidez — para que cada historia, anécdota y recomendación llegue exactamente como fue pensada." data-en="I speak fluent English and French — so that every story, anecdote, and recommendation comes through exactly as intended." data-fr="Je parle couramment anglais et français — pour que chaque histoire, anecdote et recommandation passe exactement comme prévu.">Hablo inglés y francés con fluidez — para que cada historia, anécdota y recomendación llegue exactamente como fue pensada.</p>
       </div>
 
 
@@ -1035,24 +1030,24 @@
   <div class="section-inner">
     <div class="transfers-wrap">
       <div>
-        <span class="section-eyebrow fade-up">Traslados a Aeropuertos y Puerto</span>
-        <h2 class="section-title fade-up delay-1">Llegadas y<br>Salidas sin<br><em style="font-style:italic;color:var(--gold-light)">Complicaciones</em></h2>
+        <span class="section-eyebrow fade-up" data-es="Traslados a Aeropuertos y Puerto" data-en="Airport &amp; Port Transfers" data-fr="Transferts Aéroport et Port">Traslados a Aeropuertos y Puerto</span>
+        <h2 class="section-title fade-up delay-1" data-es="Llegadas y<br>Salidas sin<br><em style='font-style:italic;color:var(--gold-light)'>Complicaciones</em>" data-en="Arrivals &amp;<br>Departures,<br><em style='font-style:italic;color:var(--gold-light)'>Hassle-Free</em>" data-fr="Arrivées et<br>Départs<br>sans <em style='font-style:italic;color:var(--gold-light)'>Tracas</em>">Llegadas y<br>Salidas sin<br><em style="font-style:italic;color:var(--gold-light)">Complicaciones</em></h2>
         <div class="gold-rule fade-up delay-2"></div>
-        <p class="fade-up delay-2" style="font-size:0.9rem;color:var(--white-dim);line-height:1.75;max-width:340px;">También realizamos traslados privados a aeropuertos y terminal de cruceros. Tarifas fijas, sin sorpresas — de tu puerta a tu destino.</p>
+        <p class="fade-up delay-2" style="font-size:0.9rem;color:var(--white-dim);line-height:1.75;max-width:340px;" data-es="También realizamos traslados privados a aeropuertos y terminal de cruceros. Tarifas fijas, sin sorpresas — de tu puerta a tu destino." data-en="We also offer private transfers to airports and the cruise terminal. Fixed rates, no surprises — from your door to your destination." data-fr="Nous assurons également des transferts privés vers les aéroports et le terminal de croisières. Tarifs fixes, sans surprises — de votre porte à votre destination.">También realizamos traslados privados a aeropuertos y terminal de cruceros. Tarifas fijas, sin sorpresas — de tu puerta a tu destino.</p>
         <br>
-        <a href="https://wa.me/5491144742207?text=Hola%2C%20quiero%20consultar%20sobre%20un%20traslado%20%28aeropuerto%20o%20puerto%29" target="_blank" rel="noopener" class="btn-tour fade-up delay-3">Reservar un Traslado</a>
+        <a href="https://wa.me/5491144742207?text=Hola%2C%20quiero%20consultar%20sobre%20un%20traslado%20%28aeropuerto%20o%20puerto%29" target="_blank" rel="noopener" class="btn-tour fade-up delay-3" data-es="Reservar un Traslado" data-en="Book a Transfer" data-fr="Réserver un Transfert">Reservar un Traslado</a>
       </div>
       <div class="fade-up delay-1">
         <table class="transfer-table">
           <thead>
             <tr>
-              <th>Destino</th>
-              <th>Efectivo (Cash)<br><span style="font-weight:400;text-transform:none;letter-spacing:0.04em;">"Tarjeta de Crédito +12%"</span></th>
+              <th data-es="Destino" data-en="Destination" data-fr="Destination">Destino</th>
+              <th data-es="Efectivo (Cash)<br><span style='font-weight:400;text-transform:none;letter-spacing:0.04em;'>&quot;Tarjeta de Crédito +12%&quot;</span>" data-en="Cash<br><span style='font-weight:400;text-transform:none;letter-spacing:0.04em;'>&quot;Credit Card +12%&quot;</span>" data-fr="Espèces<br><span style='font-weight:400;text-transform:none;letter-spacing:0.04em;'>« Carte de Crédit +12% »</span>">Efectivo (Cash)<br><span style="font-weight:400;text-transform:none;letter-spacing:0.04em;">"Tarjeta de Crédito +12%"</span></th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td>Aeropuerto Internacional Ezeiza<br><span style="font-size:0.75rem;color:rgba(255,255,255,0.3)">Ministro Pistarini</span></td>
+              <td data-es="Aeropuerto Internacional Ezeiza<br><span style='font-size:0.75rem;color:rgba(255,255,255,0.3)'>Ministro Pistarini</span>" data-en="Ezeiza International Airport<br><span style='font-size:0.75rem;color:rgba(255,255,255,0.3)'>Ministro Pistarini</span>" data-fr="Aéroport International d'Ezeiza<br><span style='font-size:0.75rem;color:rgba(255,255,255,0.3)'>Ministro Pistarini</span>">Aeropuerto Internacional Ezeiza<br><span style="font-size:0.75rem;color:rgba(255,255,255,0.3)">Ministro Pistarini</span></td>
               <td class="price-cell">USD 70</td>
             </tr>
             <tr>
@@ -1060,16 +1055,16 @@
               <td class="price-cell">USD 35</td>
             </tr>
             <tr>
-              <td>Terminal de Cruceros → Aeroparque<br><span style="font-size:0.75rem;color:rgba(255,255,255,0.3)">Benito Quinquela Martín</span></td>
+              <td data-es="Terminal de Cruceros → Aeroparque<br><span style='font-size:0.75rem;color:rgba(255,255,255,0.3)'>Benito Quinquela Martín</span>" data-en="Cruise Terminal → Aeroparque<br><span style='font-size:0.75rem;color:rgba(255,255,255,0.3)'>Benito Quinquela Martín</span>" data-fr="Terminal de Croisières → Aeroparque<br><span style='font-size:0.75rem;color:rgba(255,255,255,0.3)'>Benito Quinquela Martín</span>">Terminal de Cruceros → Aeroparque<br><span style="font-size:0.75rem;color:rgba(255,255,255,0.3)">Benito Quinquela Martín</span></td>
               <td class="price-cell">USD 35</td>
             </tr>
             <tr>
-              <td>Terminal de Cruceros → Ezeiza</td>
+              <td data-es="Terminal de Cruceros → Ezeiza" data-en="Cruise Terminal → Ezeiza" data-fr="Terminal de Croisières → Ezeiza">Terminal de Cruceros → Ezeiza</td>
               <td class="price-cell">USD 70</td>
             </tr>
           </tbody>
         </table>
-        <p class="transfer-note">Todos los precios son <strong style="color:var(--white)">en efectivo (cash)</strong>. Pagos con tarjeta de crédito tienen un recargo del 12%. Precios por vehículo, no por persona — tarifa fija sin importar el tráfico ni el horario. <strong style="color:var(--white)">Max. 4 personas</strong> por servicio. Contactanos para confirmar disponibilidad.</p>
+        <p class="transfer-note" data-es="Todos los precios son <strong style='color:var(--white)'>en efectivo (cash)</strong>. Pagos con tarjeta de crédito tienen un recargo del 12%. Precios por vehículo, no por persona — tarifa fija sin importar el tráfico ni el horario. <strong style='color:var(--white)'>Max. 4 personas</strong> por servicio. Contactanos para confirmar disponibilidad." data-en="All prices are <strong style='color:var(--white)'>in cash</strong>. Credit card payments carry a 12% surcharge. Prices are per vehicle, not per person — a fixed rate regardless of traffic or time of day. <strong style='color:var(--white)'>Max. 4 people</strong> per service. Contact us to confirm availability." data-fr="Tous les prix sont <strong style='color:var(--white)'>en espèces</strong>. Les paiements par carte de crédit entraînent un supplément de 12%. Les prix sont par véhicule, pas par personne — un tarif fixe quel que soit le trafic ou l'heure. <strong style='color:var(--white)'>Max. 4 personnes</strong> par service. Contactez-nous pour confirmer la disponibilité.">Todos los precios son <strong style="color:var(--white)">en efectivo (cash)</strong>. Pagos con tarjeta de crédito tienen un recargo del 12%. Precios por vehículo, no por persona — tarifa fija sin importar el tráfico ni el horario. <strong style="color:var(--white)">Max. 4 personas</strong> por servicio. Contactanos para confirmar disponibilidad.</p>
       </div>
     </div>
     <img src="img/auto.webp" alt="Traslado privado en Buenos Aires" class="transfer-car-img fade-up" />
@@ -1081,10 +1076,10 @@
   <div class="section-inner">
     <div class="form-wrap">
       <div>
-        <span class="section-eyebrow fade-up">Hacé tu Reserva</span>
-        <h2 class="form-aside-title fade-up delay-1">Comenzá tu<br><em>Experiencia</em><br>en Buenos Aires</h2>
+        <span class="section-eyebrow fade-up" data-es="Hacé tu Reserva" data-en="Make Your Booking" data-fr="Faites Votre Réservation">Hacé tu Reserva</span>
+        <h2 class="form-aside-title fade-up delay-1" data-es="Comenzá tu<br><em>Experiencia</em><br>en Buenos Aires" data-en="Start Your<br><em>Experience</em><br>in Buenos Aires" data-fr="Commencez Votre<br><em>Expérience</em><br>à Buenos Aires">Comenzá tu<br><em>Experiencia</em><br>en Buenos Aires</h2>
         <div class="gold-rule fade-up delay-2"></div>
-        <p class="fade-up delay-2" style="font-size:0.88rem;color:var(--white-dim);line-height:1.8;margin-bottom:2rem;">Escribinos directo por WhatsApp contándonos qué tour o traslado te interesa, la fecha y cuántas personas son — te confirmamos al toque.</p>
+        <p class="fade-up delay-2" style="font-size:0.88rem;color:var(--white-dim);line-height:1.8;margin-bottom:2rem;" data-es="Escribinos directo por WhatsApp contándonos qué tour o traslado te interesa, la fecha y cuántas personas son — te confirmamos al toque." data-en="Message us directly on WhatsApp with the tour or transfer you're interested in, the date, and how many people — we'll confirm right away." data-fr="Écrivez-nous directement sur WhatsApp en nous indiquant le tour ou le transfert qui vous intéresse, la date et le nombre de personnes — nous confirmons tout de suite.">Escribinos directo por WhatsApp contándonos qué tour o traslado te interesa, la fecha y cuántas personas son — te confirmamos al toque.</p>
         <div class="form-contact-item fade-up delay-3">
           <div class="contact-icon">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="#c9a96e" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"/></svg>
@@ -1100,12 +1095,12 @@
       </div>
 
       <div class="booking-cta fade-up delay-1">
-        <p>Contanos qué tour o traslado te interesa, la fecha aproximada y cuántas personas son. Te respondemos directo por WhatsApp.</p>
+        <p data-es="Contanos qué tour o traslado te interesa, la fecha aproximada y cuántas personas son. Te respondemos directo por WhatsApp." data-en="Tell us which tour or transfer you're interested in, the approximate date, and how many people. We'll reply directly on WhatsApp." data-fr="Dites-nous quel tour ou transfert vous intéresse, la date approximative et le nombre de personnes. Nous répondons directement sur WhatsApp.">Contanos qué tour o traslado te interesa, la fecha aproximada y cuántas personas son. Te respondemos directo por WhatsApp.</p>
         <a href="https://wa.me/5491144742207?text=Hola%2C%20quiero%20hacer%20una%20reserva" target="_blank" rel="noopener" class="btn-primary">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-          Reservar por WhatsApp
+          <span data-es="Reservar por WhatsApp" data-en="Book via WhatsApp" data-fr="Réserver via WhatsApp">Reservar por WhatsApp</span>
         </a>
-        <span class="booking-cta-note">¿Preferís mail? Escribinos a <a href="mailto:carbonediego@gmail.com">carbonediego@gmail.com</a></span>
+        <span class="booking-cta-note"><span data-es="¿Preferís mail? Escribinos a" data-en="Prefer email? Write to us at" data-fr="Vous préférez le mail ? Écrivez-nous à">¿Preferís mail? Escribinos a</span> <a href="mailto:carbonediego@gmail.com">carbonediego@gmail.com</a></span>
       </div>
     </div>
   </div>
@@ -1116,21 +1111,18 @@
   <div class="footer-inner">
     <a href="#" class="footer-logo">
       Transfer Buenos Aires
-      <span>Traslados al Aeropuerto</span>
+      <span data-es="Traslados al Aeropuerto" data-en="Airport Transfers" data-fr="Transferts Aéroport">Traslados al Aeropuerto</span>
     </a>
     <div class="footer-links">
       <a href="https://wa.me/5491144742207" target="_blank" rel="noopener">WhatsApp: +54 9 11 4474-2207</a>
       <a href="mailto:carbonediego@gmail.com">carbonediego@gmail.com</a>
       <a href="#tours">Tours</a>
-      <a href="#transfers">Traslados</a>
-      <a href="#booking">Reservar</a>
+      <a href="#transfers" data-es="Traslados" data-en="Transfers" data-fr="Transferts">Traslados</a>
+      <a href="#booking" data-es="Reservar" data-en="Book" data-fr="Réserver">Reservar</a>
     </div>
-    <p class="footer-copy">© 2026 Transfer Buenos Aires City. Todos los derechos reservados.<br>Diseño Web: <a href="https://lautaromendez.com.ar" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='inherit'">Lautaro Mendez</a></p>
+    <p class="footer-copy"><span data-es="© 2026 Transfer Buenos Aires City. Todos los derechos reservados." data-en="© 2026 Transfer Buenos Aires City. All rights reserved." data-fr="© 2026 Transfer Buenos Aires City. Tous droits réservés.">© 2026 Transfer Buenos Aires City. Todos los derechos reservados.</span><br><span data-es="Diseño Web:" data-en="Web Design:" data-fr="Conception Web :">Diseño Web:</span> <a href="https://lautaromendez.com.ar" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='inherit'">Lautaro Mendez</a></p>
   </div>
 </footer>
-
-<!-- Google Translate (oculto) -->
-<div id="google_translate_element"></div>
 
 <!-- Selector de idioma con banderas -->
 <div class="lang-switcher" id="langSwitcher">
@@ -1151,48 +1143,21 @@
 </a>
 
 <script>
-  // Textos con traducción manual (Google Translate los ignora por notranslate)
+  // Textos con traducción manual (fijos, sin depender de servicios externos)
   function applyManualTranslations(lang) {
     document.querySelectorAll('[data-es]').forEach(el => {
-      el.textContent = el.dataset[lang] || el.dataset.es;
+      el.innerHTML = el.dataset[lang] || el.dataset.es;
     });
-  }
-
-  // Siempre SETEAR la cookie (nunca borrarla): borrar requiere que dominio/path
-  // coincidan exacto con como Google la creó, y a veces no coincide y queda pegada
-  // en el idioma anterior. Para volver a español se usa /es/es (traducir es -> es).
-  function setGoogTransCookie(lang) {
-    const value = '/es/' + lang;
-    document.cookie = 'googtrans=' + value + '; path=/;';
-    document.cookie = 'googtrans=' + value + '; path=/; domain=.' + document.domain;
   }
 
   // Idioma por defecto: inglés, salvo que el visitante ya haya elegido otro
-  (function () {
-    const stored = localStorage.getItem('tba_lang');
-    const defaultLang = stored || 'en';
+  const storedLang = localStorage.getItem('tba_lang');
+  const currentLang = storedLang || 'en';
+  applyManualTranslations(currentLang);
+  document.querySelectorAll('.lang-btn').forEach(b => {
+    b.classList.toggle('active', b.dataset.lang === currentLang);
+  });
 
-    setGoogTransCookie(defaultLang);
-    applyManualTranslations(defaultLang);
-
-    document.querySelectorAll('.lang-btn').forEach(b => {
-      b.classList.toggle('active', b.dataset.lang === defaultLang);
-    });
-  })();
-</script>
-
-<script type="text/javascript">
-  function googleTranslateElementInit() {
-    new google.translate.TranslateElement({
-      pageLanguage: 'es',
-      includedLanguages: 'es,en,fr',
-      autoDisplay: false
-    }, 'google_translate_element');
-  }
-</script>
-<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-
-<script>
   // Selector de idioma
   document.querySelectorAll('.lang-btn').forEach(btn => {
     btn.addEventListener('click', () => {
@@ -1201,19 +1166,6 @@
       document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
       applyManualTranslations(lang);
-      setGoogTransCookie(lang);
-
-      if (lang === 'es') {
-        window.location.reload();
-      } else {
-        const select = document.querySelector('.goog-te-combo');
-        if (select) {
-          select.value = lang;
-          select.dispatchEvent(new Event('change'));
-        } else {
-          window.location.reload();
-        }
-      }
     });
   });
 
