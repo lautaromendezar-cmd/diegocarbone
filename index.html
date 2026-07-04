@@ -1157,19 +1157,21 @@
     });
   }
 
+  // Siempre SETEAR la cookie (nunca borrarla): borrar requiere que dominio/path
+  // coincidan exacto con como Google la creó, y a veces no coincide y queda pegada
+  // en el idioma anterior. Para volver a español se usa /es/es (traducir es -> es).
+  function setGoogTransCookie(lang) {
+    const value = '/es/' + lang;
+    document.cookie = 'googtrans=' + value + '; path=/;';
+    document.cookie = 'googtrans=' + value + '; path=/; domain=.' + document.domain;
+  }
+
   // Idioma por defecto: inglés, salvo que el visitante ya haya elegido otro
   (function () {
     const stored = localStorage.getItem('tba_lang');
     const defaultLang = stored || 'en';
 
-    if (defaultLang === 'es') {
-      document.cookie = 'googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
-      document.cookie = 'googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=.' + document.domain;
-    } else {
-      document.cookie = 'googtrans=/es/' + defaultLang + '; path=/;';
-      document.cookie = 'googtrans=/es/' + defaultLang + '; path=/; domain=.' + document.domain;
-    }
-
+    setGoogTransCookie(defaultLang);
     applyManualTranslations(defaultLang);
 
     document.querySelectorAll('.lang-btn').forEach(b => {
@@ -1198,10 +1200,9 @@
       document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
       applyManualTranslations(lang);
+      setGoogTransCookie(lang);
 
       if (lang === 'es') {
-        document.cookie = 'googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
-        document.cookie = 'googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=.' + document.domain;
         window.location.reload();
       } else {
         const select = document.querySelector('.goog-te-combo');
