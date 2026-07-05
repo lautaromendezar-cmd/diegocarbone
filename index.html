@@ -13,15 +13,42 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="google" content="notranslate" />
-  <title>Transfer Buenos Aires City | Tours Privados y Traslados</title>
-  <meta name="description" content="Tours privados en Buenos Aires con equipo bilingüe profesional. City Tour, Delta del Tigre, Día Gaucho. Vehículos híbridos autorizados. Reservá tu experiencia hoy." />
-  <meta property="og:title" content="Transfer Buenos Aires City | Tours Privados" />
-  <meta property="og:description" content="Viví Buenos Aires de otra manera. Tours privados, Delta del Tigre y Día Gaucho con equipo bilingüe y vehículos híbridos autorizados." />
+  <title data-es="Transfer Buenos Aires City | Tours Privados y Traslados" data-en="Transfer Buenos Aires City | Private Tours &amp; Transfers" data-fr="Transfer Buenos Aires City | Visites Privées et Transferts">Transfer Buenos Aires City | Tours Privados y Traslados</title>
+  <meta name="description" data-es="Tours privados en Buenos Aires con equipo bilingüe profesional. City Tour, Delta del Tigre, Día Gaucho. Vehículos híbridos autorizados. Reservá tu experiencia hoy." data-en="Private tours in Buenos Aires with a professional bilingual guide. City Tour, Tigre Delta, Gaucho Day. Licensed hybrid vehicles. Book your experience today." data-fr="Visites privées à Buenos Aires avec un guide professionnel bilingue. City Tour, Delta du Tigre, Gaucho Day. Véhicules hybrides agréés. Réservez votre expérience dès aujourd'hui." content="Tours privados en Buenos Aires con equipo bilingüe profesional. City Tour, Delta del Tigre, Día Gaucho. Vehículos híbridos autorizados. Reservá tu experiencia hoy." />
+  <link rel="canonical" href="https://www.transferbuenosairescity.com/" />
+  <meta property="og:title" content="Transfer Buenos Aires City | Private Tours &amp; Transfers" />
+  <meta property="og:description" content="Private tours in Buenos Aires with a professional bilingual guide. City Tour, Tigre Delta, Gaucho Day. Book your experience today." />
   <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.transferbuenosairescity.com/" />
+  <meta property="og:image" content="https://www.transferbuenosairescity.com/img/hero.webp" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Transfer Buenos Aires City | Private Tours &amp; Transfers" />
+  <meta name="twitter:description" content="Private tours in Buenos Aires with a professional bilingual guide. City Tour, Tigre Delta, Gaucho Day. Book your experience today." />
+  <meta name="twitter:image" content="https://www.transferbuenosairescity.com/img/hero.webp" />
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='4' fill='%230a0a0a'/><text x='16' y='22' font-family='Georgia,serif' font-size='20' font-weight='bold' fill='%23c9a96e' text-anchor='middle'>T</text></svg>" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Transfer Buenos Aires City",
+    "image": "https://www.transferbuenosairescity.com/img/hero.webp",
+    "url": "https://www.transferbuenosairescity.com/",
+    "telephone": "+5491144742207",
+    "email": "carbonediego@gmail.com",
+    "priceRange": "$$",
+    "areaServed": "Buenos Aires, Argentina",
+    "makesOffer": [
+      { "@type": "Offer", "name": "City Tour Buenos Aires", "price": "200", "priceCurrency": "USD" },
+      { "@type": "Offer", "name": "Tigre & San Isidro Tour", "price": "350", "priceCurrency": "USD" },
+      { "@type": "Offer", "name": "Gaucho Day at the Estancia", "price": "550", "priceCurrency": "USD" },
+      { "@type": "Offer", "name": "Ezeiza Airport Transfer", "price": "70", "priceCurrency": "USD" },
+      { "@type": "Offer", "name": "Aeroparque Transfer", "price": "35", "priceCurrency": "USD" }
+    ]
+  }
+  </script>
 
   <style>
     *, *::before, *::after {
@@ -1155,8 +1182,14 @@
   // Textos con traducción manual (fijos, sin depender de servicios externos)
   function applyManualTranslations(lang) {
     document.querySelectorAll('[data-es]').forEach(el => {
-      el.innerHTML = el.dataset[lang] || el.dataset.es;
+      const text = el.dataset[lang] || el.dataset.es;
+      if (el.tagName === 'META') {
+        el.setAttribute('content', text);
+      } else {
+        el.innerHTML = text;
+      }
     });
+    document.documentElement.lang = lang;
   }
 
   // Idioma por defecto: inglés, salvo que el visitante ya haya elegido otro
