@@ -1226,6 +1226,20 @@
   }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
 
   document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+  // Conversión de Google Ads: click en cualquier link de WhatsApp (abren en pestaña nueva,
+  // no hace falta demorar la navegación para que el evento llegue a tiempo)
+  document.querySelectorAll('a[href*="wa.me"]').forEach(link => {
+    link.addEventListener('click', () => {
+      if (typeof gtag === 'function') {
+        gtag('event', 'conversion', {
+          'send_to': 'AW-18299581753/v45QCMi3iMscELnq9ZVE',
+          'value': 1.0,
+          'currency': 'ARS'
+        });
+      }
+    });
+  });
 </script>
 </body>
 </html>
