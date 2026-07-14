@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.transferbuenosairescity.com/sitemap.xml
+Sitemap: https://www.transferbuenosaires.com/sitemap.xml
