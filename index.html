@@ -1262,11 +1262,16 @@
 
   // Conversión de Google Ads: click en cualquier link de WhatsApp (abren en pestaña nueva,
   // no hace falta demorar la navegación para que el evento llegue a tiempo)
+  // Se reportan dos acciones: la nueva (905d...) como objetivo de puja y la vieja
+  // (v45Q...) como secundaria/histórico. El value es un fallback: Ads usa valor fijo.
   document.querySelectorAll('a[href*="wa.me"]').forEach(link => {
     link.addEventListener('click', () => {
       if (typeof gtag === 'function') {
         gtag('event', 'conversion', {
-          'send_to': 'AW-18299581753/905dCNf6zdMcELnq9ZVE',
+          'send_to': [
+            'AW-18299581753/905dCNf6zdMcELnq9ZVE',
+            'AW-18299581753/v45QCMi3iMscELnq9ZVE'
+          ],
           'value': 1.0,
           'currency': 'ARS'
         });
