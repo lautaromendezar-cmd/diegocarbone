@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="es" translate="no">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="google" content="notranslate" />
+  <!-- Página de utilidad: se llega por el link que Diego manda por WhatsApp, no desde Google -->
+  <meta name="robots" content="noindex, follow" />
+  <title data-es="Dejá tu opinión | Transfer Buenos Aires City" data-en="Leave your review | Transfer Buenos Aires City" data-fr="Laissez votre avis | Transfer Buenos Aires City">Dejá tu opinión | Transfer Buenos Aires City</title>
+  <meta name="description" data-es="Contanos cómo fue tu experiencia con Transfer Buenos Aires City." data-en="Tell us about your experience with Transfer Buenos Aires City." data-fr="Racontez-nous votre expérience avec Transfer Buenos Aires City." content="Contanos cómo fue tu experiencia con Transfer Buenos Aires City." />
+  <!-- El link se manda por WhatsApp: la previsualización es lo primero que ve el cliente -->
+  <meta property="og:title" content="Leave your review | Transfer Buenos Aires City" />
+  <meta property="og:description" content="Tell us how your tour with Transfer Buenos Aires City went. It takes two minutes." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.transferbuenosaires.com/review" />
+  <meta property="og:image" content="https://www.transferbuenosaires.com/img/hero.webp" />
+  <meta property="og:image:width" content="1280" />
+  <meta property="og:image:height" content="714" />
+  <meta property="og:site_name" content="Transfer Buenos Aires City" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:locale:alternate" content="es_AR" />
+  <meta property="og:locale:alternate" content="fr_FR" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Leave your review | Transfer Buenos Aires City" />
+  <meta name="twitter:description" content="Tell us how your tour with Transfer Buenos Aires City went. It takes two minutes." />
+  <meta name="twitter:image" content="https://www.transferbuenosaires.com/img/hero.webp" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='4' fill='%230a0a0a'/><text x='16' y='22' font-family='Georgia,serif' font-size='20' font-weight='bold' fill='%23c9a96e' text-anchor='middle'>T</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --black: #0a0a0a;
+      --dark: #111111;
+      --dark-2: #1a1a1a;
+      --dark-3: #222222;
+      --gold: #c9a96e;
+      --gold-light: #e8c98a;
+      --gold-dim: rgba(201, 169, 110, 0.15);
+      --white: #f5f2ed;
+      --white-dim: rgba(245, 242, 237, 0.68);
+      --serif: 'Playfair Display', Georgia, serif;
+      --sans: 'Inter', system-ui, sans-serif;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--black);
+      color: var(--white);
+      font-family: var(--sans);
+      font-weight: 300;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* ─── NAV ─── */
+    nav {
+      padding: 1.25rem 2.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid rgba(201,169,110,0.14);
+      background: rgba(10,10,10,0.96);
+    }
+    .nav-logo {
+      font-family: var(--serif);
+      font-size: 1.05rem;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      color: var(--gold);
+      text-decoration: none;
+    }
+    .nav-logo span {
+      display: block;
+      font-size: 0.58rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--white-dim);
+      font-family: var(--sans);
+      font-weight: 400;
+    }
+    .nav-cta {
+      display: inline-block;
+      padding: 0.55rem 1.4rem;
+      border: 1px solid var(--gold);
+      color: var(--gold);
+      font-family: var(--sans);
+      font-size: 0.72rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: background 0.3s, color 0.3s;
+    }
+    .nav-cta:hover {
+      background: var(--gold);
+      color: var(--black);
+    }
+
+    /* ─── CONTENIDO ─── */
+    main {
+      flex: 1;
+      width: 100%;
+      max-width: 640px;
+      margin: 0 auto;
+      padding: 4.5rem 1.75rem 6rem;
+    }
+
+    .eyebrow {
+      font-size: 0.68rem;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1.1rem;
+    }
+    h1 {
+      font-family: var(--serif);
+      font-size: clamp(2.1rem, 6vw, 3.1rem);
+      font-weight: 600;
+      line-height: 1.12;
+      letter-spacing: -0.01em;
+      margin-bottom: 1.2rem;
+    }
+    .lede {
+      color: var(--white-dim);
+      font-size: 1rem;
+      margin-bottom: 3rem;
+      max-width: 46ch;
+    }
+
+    /* ─── FORMULARIO ─── */
+    .field { margin-bottom: 2rem; }
+
+    label.field-label {
+      display: block;
+      font-size: 0.7rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--white-dim);
+      margin-bottom: 0.6rem;
+    }
+    label.field-label .opt {
+      text-transform: none;
+      letter-spacing: 0.02em;
+      font-size: 0.72rem;
+      opacity: 0.55;
+    }
+
+    input[type="text"], select, textarea {
+      width: 100%;
+      background: var(--dark);
+      border: 1px solid var(--dark-3);
+      border-radius: 2px;
+      color: var(--white);
+      font-family: var(--sans);
+      font-size: 0.95rem;
+      font-weight: 300;
+      padding: 0.85rem 1rem;
+      transition: border-color 0.25s, background 0.25s;
+    }
+    input[type="text"]:focus, select:focus, textarea:focus {
+      outline: none;
+      border-color: var(--gold);
+      background: var(--dark-2);
+    }
+    textarea {
+      min-height: 150px;
+      resize: vertical;
+      line-height: 1.65;
+    }
+    select {
+      appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23c9a96e' stroke-width='1.5' fill='none'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 1rem center;
+      background-size: 12px;
+      padding-right: 2.5rem;
+      cursor: pointer;
+    }
+    select option { background: var(--dark); color: var(--white); }
+
+    .char-count {
+      font-size: 0.7rem;
+      color: var(--white-dim);
+      opacity: 0.6;
+      margin-top: 0.4rem;
+      text-align: right;
+    }
+
+    /* ─── ESTRELLAS ─── */
+    .stars {
+      display: flex;
+      gap: 0.35rem;
+    }
+    .stars input { position: absolute; opacity: 0; width: 0; height: 0; }
+    .stars label {
+      cursor: pointer;
+      line-height: 0;
+      padding: 0.2rem;
+      border-radius: 2px;
+      transition: transform 0.15s;
+    }
+    .stars label:hover { transform: scale(1.12); }
+    .stars svg { width: 30px; height: 30px; display: block; }
+    .stars svg path {
+      fill: transparent;
+      stroke: rgba(201,169,110,0.45);
+      stroke-width: 1.4px;
+      transition: fill 0.2s, stroke 0.2s;
+    }
+    .stars.picked label svg path { fill: var(--gold); stroke: var(--gold); }
+    .stars.picked label.dim svg path { fill: transparent; stroke: rgba(201,169,110,0.3); }
+    .stars input:focus-visible + label { outline: 2px solid var(--gold); outline-offset: 2px; }
+
+    /* ─── CONSENTIMIENTO ─── */
+    .consent {
+      display: flex;
+      gap: 0.8rem;
+      align-items: flex-start;
+      background: var(--dark);
+      border: 1px solid var(--dark-3);
+      border-left: 2px solid var(--gold);
+      padding: 1.1rem 1.2rem;
+      margin-bottom: 2.25rem;
+    }
+    .consent input[type="checkbox"] {
+      appearance: none;
+      flex: 0 0 auto;
+      width: 18px;
+      height: 18px;
+      margin-top: 0.22rem;
+      border: 1.5px solid rgba(201,169,110,0.5);
+      border-radius: 2px;
+      background: var(--dark-2);
+      cursor: pointer;
+      position: relative;
+      transition: background 0.2s, border-color 0.2s;
+    }
+    .consent input[type="checkbox"]:checked {
+      background: var(--gold);
+      border-color: var(--gold);
+    }
+    .consent input[type="checkbox"]:checked::after {
+      content: '';
+      position: absolute;
+      left: 5px; top: 1px;
+      width: 5px; height: 10px;
+      border: solid var(--black);
+      border-width: 0 2px 2px 0;
+      transform: rotate(45deg);
+    }
+    .consent input[type="checkbox"]:focus-visible {
+      outline: 2px solid var(--gold);
+      outline-offset: 2px;
+    }
+    .consent label {
+      font-size: 0.85rem;
+      color: var(--white-dim);
+      cursor: pointer;
+      line-height: 1.55;
+    }
+
+    /* ─── BOTÓN ─── */
+    .btn-submit {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.7rem;
+      width: 100%;
+      justify-content: center;
+      padding: 1.05rem 2.6rem;
+      background: var(--gold);
+      border: none;
+      color: var(--black);
+      font-family: var(--sans);
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: background 0.3s, transform 0.2s;
+    }
+    .btn-submit:hover { background: var(--gold-light); transform: translateY(-2px); }
+    .btn-submit:disabled { opacity: 0.65; cursor: default; transform: none; }
+
+    .spinner { display: none; }
+    .btn-submit.sending .spinner {
+      display: block;
+      width: 15px;
+      height: 15px;
+      border: 2px solid rgba(10,10,10,0.25);
+      border-top-color: var(--black);
+      border-radius: 50%;
+      animation: spin 0.7s linear infinite;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    .send-error {
+      display: none;
+      border: 1px solid rgba(163,83,64,0.6);
+      background: rgba(163,83,64,0.1);
+      padding: 1rem 1.2rem;
+      margin-top: 1.4rem;
+      font-size: 0.85rem;
+      line-height: 1.6;
+      color: var(--white-dim);
+    }
+    .send-error.show { display: block; }
+    .send-error a {
+      color: var(--gold);
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.78rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .note {
+      font-size: 0.75rem;
+      color: var(--white-dim);
+      opacity: 0.7;
+      text-align: center;
+      margin-top: 1.1rem;
+      line-height: 1.6;
+    }
+
+    .error {
+      display: none;
+      color: #e5836f;
+      font-size: 0.78rem;
+      margin-top: 0.45rem;
+    }
+    .error.show { display: block; }
+    .invalid input[type="text"], .invalid textarea, .invalid select { border-color: #a35340; }
+
+    /* ─── PANTALLA DE GRACIAS ─── */
+    .thanks { display: none; text-align: center; padding: 2rem 0; }
+    .thanks.show { display: block; animation: fadeUp 0.6s cubic-bezier(0.16,1,0.3,1) both; }
+    .thanks-mark {
+      width: 60px; height: 60px;
+      border: 1.5px solid var(--gold);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 1.8rem;
+    }
+    .thanks-mark svg { width: 26px; height: 26px; stroke: var(--gold); stroke-width: 2; fill: none; }
+    .thanks h2 {
+      font-family: var(--serif);
+      font-size: clamp(1.7rem, 5vw, 2.3rem);
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+    .thanks p { color: var(--white-dim); max-width: 40ch; margin: 0 auto 1.6rem; }
+    .thanks .fallback {
+      font-size: 0.82rem;
+      color: var(--white-dim);
+    }
+    .thanks .fallback a { color: var(--gold); }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(18px); }
+      to   { opacity: 1; transform: none; }
+    }
+
+    /* ─── FOOTER ─── */
+    footer {
+      border-top: 1px solid rgba(201,169,110,0.12);
+      padding: 2rem 1.75rem 2.4rem;
+      text-align: center;
+      font-size: 0.72rem;
+      color: var(--white-dim);
+      opacity: 0.75;
+    }
+    footer a { color: inherit; text-decoration: none; }
+    footer a:hover { color: var(--gold); }
+
+    /* ─── SELECTOR DE IDIOMA ─── */
+    .lang-switcher {
+      position: fixed;
+      bottom: 1.75rem;
+      left: 1.75rem;
+      z-index: 99;
+      display: flex;
+      gap: 0.5rem;
+      align-items: center;
+    }
+    .lang-btn {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      border: 1.5px solid rgba(201,169,110,0.35);
+      background: rgba(10,10,10,0.82);
+      backdrop-filter: blur(8px);
+      box-shadow: 0 3px 14px rgba(0,0,0,0.45);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: border-color 0.25s, transform 0.2s, background 0.25s;
+      padding: 0;
+      overflow: hidden;
+    }
+    .lang-btn:hover {
+      border-color: var(--gold);
+      transform: scale(1.1);
+      background: rgba(10,10,10,0.95);
+    }
+    .lang-btn.active {
+      border-color: var(--gold);
+      box-shadow: 0 0 0 2px rgba(201,169,110,0.25);
+    }
+    .lang-btn svg {
+      width: 22px;
+      height: 15px;
+      border-radius: 2px;
+      display: block;
+    }
+
+    @media (max-width: 640px) {
+      nav { padding: 1rem 1.25rem; }
+      .nav-cta { display: none; }
+      main { padding: 3rem 1.25rem 7rem; }
+      .lang-switcher { bottom: 1.1rem; left: 1.1rem; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+      html { scroll-behavior: auto; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="nav-logo">
+    Transfer Buenos Aires
+    <span data-es="Tours Privados y Traslados" data-en="Private Tours &amp; Transfers" data-fr="Visites et transferts privés">Tours Privados y Traslados</span>
+  </a>
+  <a href="/" class="nav-cta" data-es="Volver al sitio" data-en="Back to site" data-fr="Retour au site">Volver al sitio</a>
+</nav>
+
+<main>
+  <!-- FORMULARIO -->
+  <div id="formWrap">
+    <p class="eyebrow" data-es="Tu experiencia" data-en="Your experience" data-fr="Votre expérience">Tu experiencia</p>
+    <h1 data-es="Contanos cómo te fue" data-en="Tell us how it went" data-fr="Racontez-nous votre visite">Contanos cómo te fue</h1>
+    <p class="lede" data-es="Tu opinión nos ayuda a mejorar y a que otros viajeros sepan qué esperar. Son dos minutos." data-en="Your review helps us improve and lets other travellers know what to expect. It takes two minutes." data-fr="Votre avis nous aide à progresser et permet aux autres voyageurs de savoir à quoi s'attendre. Cela prend deux minutes.">Tu opinión nos ayuda a mejorar y a que otros viajeros sepan qué esperar. Son dos minutos.</p>
+
+    <form id="reviewForm" novalidate>
+      <div class="field" id="f-name">
+        <label class="field-label" for="name" data-es="Tu nombre" data-en="Your name" data-fr="Votre nom">Tu nombre</label>
+        <input type="text" id="name" name="name" autocomplete="name" maxlength="60" />
+        <p class="error" id="e-name" data-es="Por favor escribí tu nombre." data-en="Please enter your name." data-fr="Veuillez indiquer votre nom.">Por favor escribí tu nombre.</p>
+      </div>
+
+      <div class="field">
+        <label class="field-label" for="country">
+          <span data-es="País" data-en="Country" data-fr="Pays">País</span>
+          <span class="opt" data-es="(opcional)" data-en="(optional)" data-fr="(facultatif)">(opcional)</span>
+        </label>
+        <input type="text" id="country" name="country" autocomplete="country-name" maxlength="40" />
+      </div>
+
+      <div class="field">
+        <label class="field-label" for="email">
+          <span data-es="Tu email" data-en="Your email" data-fr="Votre e-mail">Tu email</span>
+          <span class="opt" data-es="(opcional, por si queremos responderte)" data-en="(optional, in case we want to reply)" data-fr="(facultatif, si nous souhaitons vous répondre)">(opcional, por si queremos responderte)</span>
+        </label>
+        <input type="text" id="email" name="email" autocomplete="email" inputmode="email" maxlength="80" />
+      </div>
+
+      <!-- Trampa para bots: invisible para una persona, irresistible para un script -->
+      <div aria-hidden="true" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden">
+        <label for="website">No completar</label>
+        <input type="text" id="website" name="website" tabindex="-1" autocomplete="off" />
+      </div>
+
+      <div class="field">
+        <label class="field-label" for="service" data-es="Servicio que hiciste" data-en="Service you booked" data-fr="Service réservé">Servicio que hiciste</label>
+        <select id="service" name="service">
+          <option value="city"       data-es="City Tour Buenos Aires" data-en="Buenos Aires City Tour" data-fr="City Tour Buenos Aires">City Tour Buenos Aires</option>
+          <option value="tigre"      data-es="Tigre y San Isidro" data-en="Tigre &amp; San Isidro" data-fr="Tigre et San Isidro">Tigre y San Isidro</option>
+          <option value="gaucho"     data-es="Día de Gaucho en la estancia" data-en="Gaucho Day at the Estancia" data-fr="Journée Gaucho à l'estancia">Día de Gaucho en la estancia</option>
+          <option value="ezeiza"     data-es="Traslado aeropuerto Ezeiza" data-en="Ezeiza Airport transfer" data-fr="Transfert aéroport Ezeiza">Traslado aeropuerto Ezeiza</option>
+          <option value="aeroparque" data-es="Traslado Aeroparque" data-en="Aeroparque transfer" data-fr="Transfert Aeroparque">Traslado Aeroparque</option>
+          <option value="otro"       data-es="Otro servicio" data-en="Another service" data-fr="Autre service">Otro servicio</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label class="field-label" data-es="Puntaje" data-en="Rating" data-fr="Note">Puntaje</label>
+        <div class="stars" id="stars">
+          <input type="radio" name="rating" id="r1" value="1" /><label for="r1" title="1" aria-label="1"><svg viewBox="0 0 24 24"><path d="M12 2.6l2.9 5.9 6.5.95-4.7 4.6 1.1 6.45L12 17.45 6.2 20.5l1.1-6.45L2.6 9.45l6.5-.95z"/></svg></label>
+          <input type="radio" name="rating" id="r2" value="2" /><label for="r2" title="2" aria-label="2"><svg viewBox="0 0 24 24"><path d="M12 2.6l2.9 5.9 6.5.95-4.7 4.6 1.1 6.45L12 17.45 6.2 20.5l1.1-6.45L2.6 9.45l6.5-.95z"/></svg></label>
+          <input type="radio" name="rating" id="r3" value="3" /><label for="r3" title="3" aria-label="3"><svg viewBox="0 0 24 24"><path d="M12 2.6l2.9 5.9 6.5.95-4.7 4.6 1.1 6.45L12 17.45 6.2 20.5l1.1-6.45L2.6 9.45l6.5-.95z"/></svg></label>
+          <input type="radio" name="rating" id="r4" value="4" /><label for="r4" title="4" aria-label="4"><svg viewBox="0 0 24 24"><path d="M12 2.6l2.9 5.9 6.5.95-4.7 4.6 1.1 6.45L12 17.45 6.2 20.5l1.1-6.45L2.6 9.45l6.5-.95z"/></svg></label>
+          <input type="radio" name="rating" id="r5" value="5" checked /><label for="r5" title="5" aria-label="5"><svg viewBox="0 0 24 24"><path d="M12 2.6l2.9 5.9 6.5.95-4.7 4.6 1.1 6.45L12 17.45 6.2 20.5l1.1-6.45L2.6 9.45l6.5-.95z"/></svg></label>
+        </div>
+      </div>
+
+      <div class="field" id="f-comment">
+        <label class="field-label" for="comment" data-es="Tu comentario" data-en="Your review" data-fr="Votre avis">Tu comentario</label>
+        <textarea id="comment" name="comment" maxlength="900" placeholder=""></textarea>
+        <p class="char-count"><span id="count">0</span>/900</p>
+        <p class="error" id="e-comment" data-es="Escribí unas líneas sobre tu experiencia." data-en="Please write a few lines about your experience." data-fr="Écrivez quelques lignes sur votre expérience.">Escribí unas líneas sobre tu experiencia.</p>
+      </div>
+
+      <div class="consent" id="f-consent">
+        <input type="checkbox" id="consent" name="consent" />
+        <label for="consent" data-es="Autorizo a Transfer Buenos Aires City a publicar este comentario junto a mi nombre y país en su sitio web y redes sociales." data-en="I authorise Transfer Buenos Aires City to publish this review along with my name and country on their website and social media." data-fr="J'autorise Transfer Buenos Aires City à publier cet avis avec mon nom et mon pays sur son site web et ses réseaux sociaux.">Autorizo a Transfer Buenos Aires City a publicar este comentario junto a mi nombre y país en su sitio web y redes sociales.</label>
+      </div>
+      <p class="error" id="e-consent" style="margin:-1.6rem 0 1.8rem" data-es="Necesitamos tu autorización para poder publicarlo." data-en="We need your authorisation in order to publish it." data-fr="Nous avons besoin de votre autorisation pour le publier.">Necesitamos tu autorización para poder publicarlo.</p>
+
+      <button type="submit" class="btn-submit" id="submitBtn">
+        <span class="spinner" aria-hidden="true"></span>
+        <span class="btn-label" data-es="Enviar mi opinión" data-en="Send my review" data-fr="Envoyer mon avis">Enviar mi opinión</span>
+      </button>
+      <p class="note" data-es="No compartimos tus datos con nadie." data-en="We never share your details with anyone." data-fr="Nous ne partageons vos données avec personne.">No compartimos tus datos con nadie.</p>
+
+      <!-- Si el envío falla, WhatsApp queda como salida y no se pierde la reseña -->
+      <div class="send-error" id="sendError">
+        <p data-es="No pudimos enviar tu comentario. Probá de nuevo en un momento, o mandánoslo por WhatsApp." data-en="We couldn't send your review. Please try again in a moment, or send it to us on WhatsApp." data-fr="Nous n'avons pas pu envoyer votre avis. Réessayez dans un instant, ou envoyez-le nous sur WhatsApp.">No pudimos enviar tu comentario. Probá de nuevo en un momento, o mandánoslo por WhatsApp.</p>
+        <a id="waFallbackError" href="#" target="_blank" rel="noopener" data-es="Enviar por WhatsApp" data-en="Send on WhatsApp" data-fr="Envoyer sur WhatsApp">Enviar por WhatsApp</a>
+      </div>
+    </form>
+  </div>
+
+  <!-- GRACIAS -->
+  <div class="thanks" id="thanks">
+    <div class="thanks-mark">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </div>
+    <h2 data-es="Gracias" data-en="Thank you" data-fr="Merci">Gracias</h2>
+    <p data-es="Recibimos tu comentario. Gracias por tomarte el tiempo de escribirlo." data-en="We've received your review. Thank you for taking the time to write it." data-fr="Nous avons bien reçu votre avis. Merci d'avoir pris le temps de l'écrire.">Recibimos tu comentario. Gracias por tomarte el tiempo de escribirlo.</p>
+    <p class="fallback">
+      <a href="/" data-es="Volver al sitio" data-en="Back to the site" data-fr="Retour au site">Volver al sitio</a>
+    </p>
+  </div>
+</main>
+
+<footer>
+  <span data-es="© 2026 Transfer Buenos Aires City" data-en="© 2026 Transfer Buenos Aires City" data-fr="© 2026 Transfer Buenos Aires City">© 2026 Transfer Buenos Aires City</span> ·
+  <span data-es="Diseño Web:" data-en="Web Design:" data-fr="Conception Web :">Diseño Web:</span>
+  <a href="https://lautaromendez.com.ar" target="_blank" rel="noopener">Lautaro Mendez</a>
+</footer>
+
+<!-- Selector de idioma con banderas (misma clave de localStorage que el home) -->
+<div class="lang-switcher" id="langSwitcher">
+  <button class="lang-btn" data-lang="es" title="Español" aria-label="Español">
+    <svg viewBox="0 0 22 15" xmlns="http://www.w3.org/2000/svg"><rect width="22" height="15" fill="#c60b1e"/><rect y="3.75" width="22" height="7.5" fill="#ffc400"/></svg>
+  </button>
+  <button class="lang-btn" data-lang="en" title="English" aria-label="English">
+    <svg viewBox="0 0 22 15" xmlns="http://www.w3.org/2000/svg"><rect width="22" height="15" fill="#012169"/><path d="M0,0 L22,15 M22,0 L0,15" stroke="#fff" stroke-width="3"/><path d="M0,0 L22,15 M22,0 L0,15" stroke="#c8102e" stroke-width="1.8"/><rect x="9" width="4" height="15" fill="#fff"/><rect y="5.5" width="22" height="4" fill="#fff"/><rect x="9.8" width="2.4" height="15" fill="#c8102e"/><rect y="6.3" width="22" height="2.4" fill="#c8102e"/></svg>
+  </button>
+  <button class="lang-btn" data-lang="fr" title="Français" aria-label="Français">
+    <svg viewBox="0 0 22 15" xmlns="http://www.w3.org/2000/svg"><rect width="7.33" height="15" fill="#002395"/><rect x="7.33" width="7.34" height="15" fill="#fff"/><rect x="14.67" width="7.33" height="15" fill="#ed2939"/></svg>
+  </button>
+</div>
+
+<script>
+  var WA_NUM = '5491144742207';
+
+  /* ─── i18n: mismo mecanismo y misma clave que el home ─── */
+  var PLACEHOLDER = {
+    es: 'Qué tour hiciste, cómo fue la atención, qué te llevás de la experiencia...',
+    en: 'Which tour you took, how the service was, what you take away from it...',
+    fr: "Quelle visite vous avez faite, la qualité du service, ce que vous en retenez..."
+  };
+
+  /* Etiquetas del mensaje de WhatsApp, en el idioma del visitante */
+  var WA_LABELS = {
+    es: { head: 'Nueva opinión desde la web', name: 'Nombre', country: 'País', service: 'Servicio', rating: 'Puntaje', comment: 'Comentario', consent: 'Autoriza a publicarlo con su nombre', yes: 'Sí' },
+    en: { head: 'New review from the website', name: 'Name', country: 'Country', service: 'Service', rating: 'Rating', comment: 'Review', consent: 'Authorises publishing it with their name', yes: 'Yes' },
+    fr: { head: 'Nouvel avis depuis le site', name: 'Nom', country: 'Pays', service: 'Service', rating: 'Note', comment: 'Avis', consent: "Autorise la publication avec son nom", yes: 'Oui' }
+  };
+
+  var lang = 'en';
+
+  function applyManualTranslations(l) {
+    document.querySelectorAll('[data-es]').forEach(function (el) {
+      var text = el.dataset[l] || el.dataset.es;
+      if (el.tagName === 'META') {
+        el.setAttribute('content', text);
+      } else {
+        el.innerHTML = text;
+      }
+    });
+    document.getElementById('comment').placeholder = PLACEHOLDER[l] || PLACEHOLDER.en;
+    document.documentElement.lang = l;
+    lang = l;
+  }
+
+  var storedLang = null;
+  try { storedLang = localStorage.getItem('tba_lang'); } catch (e) {}
+  applyManualTranslations(storedLang || 'en');
+
+  document.querySelectorAll('.lang-btn').forEach(function (b) {
+    b.classList.toggle('active', b.dataset.lang === lang);
+  });
+  document.querySelectorAll('.lang-btn').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var l = btn.dataset.lang;
+      try { localStorage.setItem('tba_lang', l); } catch (e) {}
+      document.querySelectorAll('.lang-btn').forEach(function (b) { b.classList.remove('active'); });
+      btn.classList.add('active');
+      applyManualTranslations(l);
+    });
+  });
+
+  /* ─── Estrellas ─── */
+  var starsBox = document.getElementById('stars');
+  function paintStars() {
+    var picked = starsBox.querySelector('input:checked');
+    var value = picked ? parseInt(picked.value, 10) : 0;
+    starsBox.classList.toggle('picked', value > 0);
+    starsBox.querySelectorAll('label').forEach(function (lab, i) {
+      lab.classList.toggle('dim', i + 1 > value);
+    });
+  }
+  starsBox.addEventListener('change', paintStars);
+  paintStars();
+
+  /* ─── Contador de caracteres ─── */
+  var comment = document.getElementById('comment');
+  var count = document.getElementById('count');
+  comment.addEventListener('input', function () { count.textContent = comment.value.length; });
+
+  /* ─── Envío ─── */
+  function showError(fieldId, errorId, on) {
+    document.getElementById(fieldId).classList.toggle('invalid', on);
+    document.getElementById(errorId).classList.toggle('show', on);
+  }
+
+  var submitBtn = document.getElementById('submitBtn');
+  var sendError = document.getElementById('sendError');
+
+  document.getElementById('reviewForm').addEventListener('submit', function (ev) {
+    ev.preventDefault();
+    if (submitBtn.disabled) return;
+
+    var name = document.getElementById('name').value.trim();
+    var country = document.getElementById('country').value.trim();
+    var text = comment.value.trim();
+    var consent = document.getElementById('consent').checked;
+    var serviceSel = document.getElementById('service');
+    var serviceName = serviceSel.options[serviceSel.selectedIndex].textContent.trim();
+    var ratingEl = starsBox.querySelector('input:checked');
+    var rating = ratingEl ? ratingEl.value : '';
+
+    var bad = false;
+    showError('f-name', 'e-name', false);
+    showError('f-comment', 'e-comment', false);
+    document.getElementById('e-consent').classList.remove('show');
+
+    if (name.length < 2) { showError('f-name', 'e-name', true); bad = true; }
+    if (text.length < 15) { showError('f-comment', 'e-comment', true); bad = true; }
+    if (!consent) { document.getElementById('e-consent').classList.add('show'); bad = true; }
+
+    if (bad) {
+      var first = document.querySelector('.invalid input, .invalid textarea') || document.getElementById('consent');
+      first.focus();
+      return;
+    }
+
+    /* Link de WhatsApp: solo se usa si el envío por mail falla */
+    var L = WA_LABELS[lang] || WA_LABELS.en;
+    var lines = [L.head, '', L.name + ': ' + name];
+    if (country) lines.push(L.country + ': ' + country);
+    lines.push(L.service + ': ' + serviceName);
+    lines.push(L.rating + ': ' + rating + '/5');
+    lines.push('');
+    lines.push(L.comment + ': ' + text);
+    lines.push('');
+    lines.push(L.consent + ': ' + L.yes);
+    document.getElementById('waFallbackError').href =
+      'https://wa.me/' + WA_NUM + '?text=' + encodeURIComponent(lines.join('\n'));
+
+    sendError.classList.remove('show');
+    submitBtn.disabled = true;
+    submitBtn.classList.add('sending');
+
+    fetch('/api/send-review', {
+      method: 'POST',
+      headers: { 'content-type': 'application/json' },
+      body: JSON.stringify({
+        name: name,
+        country: country,
+        email: document.getElementById('email').value.trim(),
+        service: serviceSel.value,
+        rating: rating,
+        comment: text,
+        consent: true,
+        lang: lang,
+        website: document.getElementById('website').value
+      })
+    })
+      .then(function (r) { return r.ok ? r.json() : Promise.reject(r.status); })
+      .then(function (data) {
+        if (!data || !data.ok) return Promise.reject('respuesta_invalida');
+        document.getElementById('formWrap').style.display = 'none';
+        document.getElementById('thanks').classList.add('show');
+        window.scrollTo({ top: 0 });
+      })
+      .catch(function () {
+        submitBtn.disabled = false;
+        submitBtn.classList.remove('sending');
+        sendError.classList.add('show');
+      });
+  });
+</script>
+
+</body>
+</html>
