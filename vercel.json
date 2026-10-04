@@ -2,6 +2,6 @@
   "cleanUrls": true,
   "trailingSlash": false,
   "rewrites": [
-    { "source": "/(en|es|fr)", "destination": "/index.html" }
+    { "source": "/(en|es|fr)", "destination": "/" }
   ]
 }
