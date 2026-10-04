@@ -601,7 +601,15 @@
 
   var storedLang = null;
   try { storedLang = localStorage.getItem('tba_lang'); } catch (e) {}
-  applyManualTranslations(storedLang || 'en');
+  function browserLang() {
+    var prefs = navigator.languages || [navigator.language || ''];
+    for (var i = 0; i < prefs.length; i++) {
+      var code = String(prefs[i]).slice(0, 2).toLowerCase();
+      if (code === 'es' || code === 'fr' || code === 'en') return code;
+    }
+    return 'en';
+  }
+  applyManualTranslations(storedLang || browserLang());
 
   document.querySelectorAll('.lang-btn').forEach(function (b) {
     b.classList.toggle('active', b.dataset.lang === lang);

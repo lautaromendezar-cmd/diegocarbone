@@ -17,6 +17,10 @@
   <title data-es="Transfer Buenos Aires City | Tours Privados y Traslados" data-en="Transfer Buenos Aires City | Private Tours &amp; Transfers" data-fr="Transfer Buenos Aires City | Visites Privées et Transferts">Transfer Buenos Aires City | Tours Privados y Traslados</title>
   <meta name="description" data-es="Tours privados en Buenos Aires con equipo bilingüe profesional. City Tour, Delta del Tigre, Día Gaucho. Vehículos híbridos autorizados. Reservá tu experiencia hoy." data-en="Private tours in Buenos Aires with a professional bilingual guide. City Tour, Tigre Delta, Gaucho Day. Licensed hybrid vehicles. Book your experience today." data-fr="Visites privées à Buenos Aires avec un guide professionnel bilingue. City Tour, Delta du Tigre, Gaucho Day. Véhicules hybrides agréés. Réservez votre expérience dès aujourd'hui." content="Tours privados en Buenos Aires con equipo bilingüe profesional. City Tour, Delta del Tigre, Día Gaucho. Vehículos híbridos autorizados. Reservá tu experiencia hoy." />
   <link rel="canonical" href="https://www.transferbuenosaires.com/" />
+  <link rel="alternate" hreflang="en" href="https://www.transferbuenosaires.com/en" />
+  <link rel="alternate" hreflang="es" href="https://www.transferbuenosaires.com/es" />
+  <link rel="alternate" hreflang="fr" href="https://www.transferbuenosaires.com/fr" />
+  <link rel="alternate" hreflang="x-default" href="https://www.transferbuenosaires.com/" />
   <meta property="og:title" content="Transfer Buenos Aires City | Private Tours &amp; Transfers" />
   <meta property="og:description" content="Private tours in Buenos Aires with a professional bilingual guide. City Tour, Tigre Delta, Gaucho Day. Book your experience today." />
   <meta property="og:type" content="website" />
@@ -228,6 +232,20 @@
       to   { opacity: 1; transform: translateY(0); }
     }
 
+    .hero-langs {
+      display: table;
+      margin: 0 auto 1.4rem;
+      padding: 0.5rem 1.1rem;
+      border: 1px solid var(--gold);
+      border-radius: 999px;
+      background: rgba(0,0,0,0.35);
+      font-family: var(--sans);
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      color: var(--gold-light);
+      animation: heroSlideUp 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.15s both;
+    }
     .hero-eyebrow {
       display: inline-block;
       font-family: var(--sans);
@@ -907,6 +925,7 @@
   </div>
   <div class="hero-overlay"></div>
   <div class="hero-content">
+    <span class="hero-langs" data-es="Guía en español, inglés y francés" data-en="English &amp; French-speaking guide" data-fr="Votre guide parle français">Guía en español, inglés y francés</span>
     <span class="hero-eyebrow" data-es="Buenos Aires · Experiencias Privadas" data-en="Buenos Aires · Private Experiences" data-fr="Buenos Aires · Expériences Privées">Buenos Aires · Experiencias Privadas</span>
     <h1 class="hero-title" data-es="Descubrí el <em>Alma</em><br>de Buenos Aires" data-en="Discover the <em>Soul</em><br>of Buenos Aires" data-fr="Découvrez l'<em>âme</em><br>de Buenos Aires">
       Descubrí el <em>Alma</em><br>de Buenos Aires
@@ -1230,9 +1249,28 @@
     document.documentElement.lang = lang;
   }
 
-  // Idioma por defecto: inglés, salvo que el visitante ya haya elegido otro
-  const storedLang = localStorage.getItem('tba_lang');
-  const currentLang = storedLang || 'en';
+  // Idioma: el que eligió el visitante; si no eligió, el de su navegador (es/fr); si no, inglés
+  function browserLang() {
+    const prefs = navigator.languages || [navigator.language || ''];
+    for (const p of prefs) {
+      const code = String(p).slice(0, 2).toLowerCase();
+      if (code === 'es' || code === 'fr' || code === 'en') return code;
+    }
+    return 'en';
+  }
+  // /en, /es y /fr fijan el idioma (ahí aterrizan los anuncios de cada idioma) y mandan sobre todo lo demás
+  const pathLang = (location.pathname.match(/^\/(en|es|fr)\/?$/) || [])[1] || null;
+  let storedLang = null;
+  try { storedLang = localStorage.getItem('tba_lang'); } catch (e) {}
+  const currentLang = pathLang || storedLang || browserLang();
+
+  // En las versiones por idioma, la URL canónica es la propia
+  function setLangUrl(lang) {
+    const url = 'https://www.transferbuenosaires.com/' + lang;
+    document.querySelector('link[rel="canonical"]').href = url;
+    document.querySelector('meta[property="og:url"]').content = url;
+  }
+  if (pathLang) setLangUrl(pathLang);
   applyManualTranslations(currentLang);
   document.querySelectorAll('.lang-btn').forEach(b => {
     b.classList.toggle('active', b.dataset.lang === currentLang);
@@ -1242,7 +1280,11 @@
   document.querySelectorAll('.lang-btn').forEach(btn => {
     btn.addEventListener('click', () => {
       const lang = btn.dataset.lang;
-      localStorage.setItem('tba_lang', lang);
+      try { localStorage.setItem('tba_lang', lang); } catch (e) {}
+      if (pathLang) {
+        history.replaceState(null, '', '/' + lang + location.search + location.hash);
+        setLangUrl(lang);
+      }
       document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
       applyManualTranslations(lang);
