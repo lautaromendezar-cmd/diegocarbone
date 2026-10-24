@@ -699,33 +699,149 @@
       flex-shrink: 0;
       font-size: 0.9rem;
     }
-    .booking-cta {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      gap: 1.5rem;
+    .booking-form {
       background: var(--dark-2);
       border: 1px solid rgba(201,169,110,0.18);
-      padding: 3.5rem 2.5rem;
-      height: 100%;
+      padding: 2.5rem 2.25rem;
     }
-    .booking-cta p {
-      font-size: 0.95rem;
+    @media (max-width: 600px) {
+      .booking-form { padding: 2rem 1.25rem; }
+    }
+    .bf-row { display: grid; grid-template-columns: 1fr 1fr; gap: 0 1.25rem; }
+    @media (max-width: 600px) {
+      .bf-row { grid-template-columns: 1fr; }
+    }
+    .bf-field { margin-bottom: 1.4rem; }
+    .bf-field label {
+      display: block;
+      font-size: 0.68rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
       color: var(--white-dim);
-      line-height: 1.8;
-      max-width: 360px;
+      margin-bottom: 0.5rem;
     }
-    .booking-cta .btn-primary {
-      display: inline-flex;
+    .bf-field label .opt {
+      text-transform: none;
+      letter-spacing: 0.02em;
+      opacity: 0.55;
+    }
+    .booking-form input, .booking-form select, .booking-form textarea {
+      width: 100%;
+      background: var(--dark);
+      border: 1px solid var(--dark-3);
+      border-radius: 2px;
+      color: var(--white);
+      font-family: var(--sans);
+      font-size: 16px; /* 16px: en iPhone, menos que eso hace zoom al enfocar */
+      font-weight: 300;
+      padding: 0.8rem 0.95rem;
+      transition: border-color 0.25s, background 0.25s;
+      color-scheme: dark;
+    }
+    .booking-form input:focus, .booking-form select:focus, .booking-form textarea:focus {
+      outline: none;
+      border-color: var(--gold);
+      background: var(--black);
+    }
+    .booking-form textarea { min-height: 96px; resize: vertical; line-height: 1.6; }
+    .booking-form select {
+      appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23c9a96e' stroke-width='1.5' fill='none'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 0.95rem center;
+      background-size: 12px;
+      padding-right: 2.4rem;
+      cursor: pointer;
+    }
+    .booking-form select option { background: var(--dark); color: var(--white); }
+    .bf-hint {
+      font-size: 0.75rem;
+      color: var(--white-dim);
+      opacity: 0.75;
+      margin: -0.6rem 0 1.4rem;
+    }
+    .bf-error {
+      display: none;
+      color: #e5836f;
+      font-size: 0.78rem;
+      margin-top: 0.4rem;
+    }
+    .bf-error.show { display: block; }
+    .bf-invalid input, .bf-invalid select { border-color: #a35340; }
+    .bf-submit {
+      width: 100%;
+      border: none;
+      cursor: pointer;
+      animation: none;
+      margin-top: 0.4rem;
+    }
+    .bf-submit:disabled { opacity: 0.6; cursor: wait; transform: none; }
+    .bf-note {
+      font-size: 0.75rem;
+      color: rgba(255,255,255,0.4);
+      text-align: center;
+      margin-top: 0.9rem;
+      line-height: 1.6;
+    }
+    .bf-or {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin: 1.8rem 0 1.3rem;
+      font-size: 0.7rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.35);
+    }
+    .bf-or::before, .bf-or::after { content: ''; flex: 1; height: 1px; background: var(--dark-3); }
+    .bf-wa {
+      display: flex;
       align-items: center;
       justify-content: center;
       gap: 0.6rem;
-      animation: none;
+      border: 1px solid var(--gold);
+      color: var(--gold);
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 0.95rem 1.5rem;
+      transition: background 0.3s, color 0.3s;
     }
-    /* flex-shrink:0 para que el ícono no se deforme cuando el label parte en dos líneas (mobile) */
-    .booking-cta .btn-primary svg { width: 18px; height: 18px; flex-shrink: 0; fill: var(--black); }
+    .bf-wa svg { width: 18px; height: 18px; flex-shrink: 0; fill: currentColor; }
+    .bf-wa:hover { background: var(--gold); color: var(--black); }
+    .bf-send-error {
+      display: none;
+      border-left: 2px solid #e5836f;
+      background: rgba(229,131,111,0.08);
+      padding: 0.9rem 1rem;
+      font-size: 0.85rem;
+      color: var(--white-dim);
+      margin-top: 1rem;
+      line-height: 1.6;
+    }
+    .bf-send-error.show { display: block; }
+    .bf-send-error a { color: var(--gold); }
+    .bf-thanks { display: none; text-align: center; padding: 1.5rem 0; }
+    .bf-thanks.show { display: block; }
+    .bf-thanks-mark {
+      width: 56px; height: 56px;
+      border: 1.5px solid var(--gold);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 1.5rem;
+    }
+    .bf-thanks-mark svg { width: 24px; height: 24px; stroke: var(--gold); stroke-width: 2; fill: none; }
+    .bf-thanks h3 {
+      font-family: var(--serif);
+      font-size: 1.7rem;
+      font-weight: 600;
+      color: var(--white);
+      margin-bottom: 0.9rem;
+    }
+    .bf-thanks p { color: var(--white-dim); font-size: 0.92rem; line-height: 1.75; max-width: 38ch; margin: 0 auto 1.4rem; }
+    .bf-thanks a { color: var(--gold); }
     .booking-cta-note {
       font-size: 0.75rem;
       color: rgba(255,255,255,0.35);
@@ -1130,7 +1246,7 @@
         <span class="section-eyebrow fade-up" data-es="Hacé tu Reserva" data-en="Make Your Booking" data-fr="Faites votre réservation">Hacé tu Reserva</span>
         <h2 class="form-aside-title fade-up delay-1" data-es="Comenzá tu<br><em>Experiencia</em><br>en Buenos Aires" data-en="Start Your<br><em>Experience</em><br>in Buenos Aires" data-fr="Commencez votre<br><em>expérience</em><br>à Buenos Aires">Comenzá tu<br><em>Experiencia</em><br>en Buenos Aires</h2>
         <div class="gold-rule fade-up delay-2"></div>
-        <p class="fade-up delay-2" style="font-size:0.88rem;color:var(--white-dim);line-height:1.8;margin-bottom:2rem;" data-es="Escribinos directo por WhatsApp contándonos qué tour o traslado te interesa, la fecha y cuántas personas son — te confirmamos al toque." data-en="Message us directly on WhatsApp with the tour or transfer you're interested in, the date, and how many people — we'll confirm right away." data-fr="Écrivez-nous directement sur WhatsApp en nous indiquant le tour ou le transfert qui vous intéresse, la date et le nombre de personnes — nous confirmons tout de suite.">Escribinos directo por WhatsApp contándonos qué tour o traslado te interesa, la fecha y cuántas personas son — te confirmamos al toque.</p>
+        <p class="fade-up delay-2" style="font-size:0.88rem;color:var(--white-dim);line-height:1.8;margin-bottom:2rem;" data-es="Dejanos tus datos y te respondemos por mail o por WhatsApp, como prefieras. Sin pago ni compromiso." data-en="Leave your details and we'll get back to you by email or WhatsApp, whichever you prefer. No payment, no commitment." data-fr="Laissez vos coordonnées et nous vous répondons par e-mail ou par WhatsApp, comme vous préférez. Sans paiement ni engagement.">Dejanos tus datos y te respondemos por mail o por WhatsApp, como prefieras. Sin pago ni compromiso.</p>
         <div class="form-contact-item fade-up delay-3">
           <div class="contact-icon">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="#c9a96e" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"/></svg>
@@ -1145,13 +1261,90 @@
         </div>
       </div>
 
-      <div class="booking-cta fade-up delay-1">
-        <p data-es="Contanos qué tour o traslado te interesa, la fecha aproximada y cuántas personas son. Te respondemos directo por WhatsApp." data-en="Tell us which tour or transfer you're interested in, the approximate date, and how many people. We'll reply directly on WhatsApp." data-fr="Dites-nous quel tour ou transfert vous intéresse, la date approximative et le nombre de personnes. Nous répondons directement sur WhatsApp.">Contanos qué tour o traslado te interesa, la fecha aproximada y cuántas personas son. Te respondemos directo por WhatsApp.</p>
-        <a href="https://wa.me/5491144742207" data-wa="reserva" target="_blank" rel="noopener" class="btn-primary">
+      <div class="booking-form fade-up delay-1">
+        <form id="bookingForm" novalidate>
+          <div class="bf-field" id="bf-f-name">
+            <label for="bf-name" data-es="Tu nombre" data-en="Your name" data-fr="Votre nom">Tu nombre</label>
+            <input type="text" id="bf-name" name="name" autocomplete="name" maxlength="60" />
+            <p class="bf-error" id="bf-e-name" data-es="Escribí tu nombre." data-en="Please enter your name." data-fr="Veuillez indiquer votre nom.">Escribí tu nombre.</p>
+          </div>
+
+          <div class="bf-field">
+            <label for="bf-service" data-es="Tour o traslado" data-en="Tour or transfer" data-fr="Visite ou transfert">Tour o traslado</label>
+            <select id="bf-service" name="service">
+              <option value="city"       data-es="City Tour Buenos Aires · USD 200" data-en="Buenos Aires City Tour · USD 200" data-fr="City Tour Buenos Aires · 200 USD">City Tour Buenos Aires · USD 200</option>
+              <option value="tigre"      data-es="Tigre y San Isidro · USD 350" data-en="Tigre &amp; San Isidro · USD 350" data-fr="Tigre et San Isidro · 350 USD">Tigre y San Isidro · USD 350</option>
+              <option value="gaucho"     data-es="Gaucho Day en la estancia · USD 550" data-en="Gaucho Day at the Estancia · USD 550" data-fr="Journée Gaucho à l'estancia · 550 USD">Gaucho Day en la estancia · USD 550</option>
+              <option value="ezeiza"     data-es="Traslado aeropuerto Ezeiza" data-en="Ezeiza Airport transfer" data-fr="Transfert aéroport Ezeiza">Traslado aeropuerto Ezeiza</option>
+              <option value="aeroparque" data-es="Traslado Aeroparque" data-en="Aeroparque transfer" data-fr="Transfert Aeroparque">Traslado Aeroparque</option>
+              <option value="otro"       data-es="Otro / todavía no sé" data-en="Something else / not sure yet" data-fr="Autre / je ne sais pas encore">Otro / todavía no sé</option>
+            </select>
+          </div>
+
+          <div class="bf-row">
+            <div class="bf-field">
+              <label for="bf-date"><span data-es="Fecha" data-en="Date" data-fr="Date">Fecha</span> <span class="opt" data-es="(aprox.)" data-en="(approx.)" data-fr="(approx.)">(aprox.)</span></label>
+              <input type="date" id="bf-date" name="date" />
+            </div>
+            <div class="bf-field">
+              <label for="bf-people" data-es="Personas" data-en="Guests" data-fr="Personnes">Personas</label>
+              <select id="bf-people" name="people">
+                <option value="1">1</option>
+                <option value="2" selected>2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8+">8+</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="bf-row" id="bf-f-contact">
+            <div class="bf-field">
+              <label for="bf-email" data-es="Email" data-en="Email" data-fr="E-mail">Email</label>
+              <input type="email" id="bf-email" name="email" autocomplete="email" inputmode="email" maxlength="80" />
+            </div>
+            <div class="bf-field">
+              <label for="bf-phone" data-es="WhatsApp" data-en="WhatsApp" data-fr="WhatsApp">WhatsApp</label>
+              <input type="tel" id="bf-phone" name="phone" autocomplete="tel" inputmode="tel" maxlength="30" placeholder="+33 6 12 34 56 78" data-ph-es="+54 9 11 1234-5678" data-ph-en="+1 555 123 4567" data-ph-fr="+33 6 12 34 56 78" />
+            </div>
+          </div>
+          <p class="bf-hint" data-es="Con uno de los dos alcanza." data-en="Either one is enough." data-fr="L'un des deux suffit.">Con uno de los dos alcanza.</p>
+          <p class="bf-error" id="bf-e-contact" style="margin:-1rem 0 1.4rem" data-es="Dejanos un mail o un WhatsApp para poder responderte." data-en="Please leave an email or WhatsApp number so we can reply." data-fr="Laissez un e-mail ou un numéro WhatsApp pour que nous puissions vous répondre.">Dejanos un mail o un WhatsApp para poder responderte.</p>
+
+          <div class="bf-field">
+            <label for="bf-message"><span data-es="¿Algo más?" data-en="Anything else?" data-fr="Autre chose ?">¿Algo más?</span> <span class="opt" data-es="(opcional)" data-en="(optional)" data-fr="(facultatif)">(opcional)</span></label>
+            <textarea id="bf-message" name="message" maxlength="900" data-ph-es="Hotel, horario, intereses…" data-ph-en="Hotel, timing, interests…" data-ph-fr="Hôtel, horaires, centres d'intérêt…"></textarea>
+          </div>
+
+          <!-- Trampa para bots: invisible para una persona, irresistible para un script -->
+          <div aria-hidden="true" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden">
+            <label for="bf-website">No completar</label>
+            <input type="text" id="bf-website" name="website" tabindex="-1" autocomplete="off" />
+          </div>
+
+          <button type="submit" class="btn-primary bf-submit" id="bf-submit" data-es="Enviar consulta" data-en="Send request" data-fr="Envoyer la demande">Enviar consulta</button>
+          <p class="bf-note" data-es="Sin pago ni compromiso. No compartimos tus datos." data-en="No payment, no commitment. We never share your details." data-fr="Sans paiement ni engagement. Vos données ne sont jamais partagées.">Sin pago ni compromiso. No compartimos tus datos.</p>
+
+          <div class="bf-send-error" id="bf-send-error">
+            <span data-es="No pudimos enviar la consulta. Probá de nuevo en un momento, o escribinos por WhatsApp." data-en="We couldn't send your request. Please try again in a moment, or message us on WhatsApp." data-fr="Nous n'avons pas pu envoyer votre demande. Réessayez dans un instant, ou écrivez-nous sur WhatsApp.">No pudimos enviar la consulta. Probá de nuevo en un momento, o escribinos por WhatsApp.</span>
+          </div>
+        </form>
+
+        <div class="bf-thanks" id="bf-thanks" role="status">
+          <div class="bf-thanks-mark"><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <h3 data-es="Recibimos tu consulta" data-en="Request received" data-fr="Demande reçue">Recibimos tu consulta</h3>
+          <p data-es="Diego te va a responder por mail o WhatsApp. Si es urgente, escribile directo." data-en="Diego will get back to you by email or WhatsApp. If it's urgent, message him directly." data-fr="Diego vous répondra par e-mail ou WhatsApp. Si c'est urgent, écrivez-lui directement.">Diego te va a responder por mail o WhatsApp. Si es urgente, escribile directo.</p>
+        </div>
+
+        <div class="bf-or" data-es="o" data-en="or" data-fr="ou">o</div>
+        <a href="https://wa.me/5491144742207" data-wa="reserva" target="_blank" rel="noopener" class="bf-wa">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-          <span data-es="Reservar por WhatsApp" data-en="Book via WhatsApp" data-fr="Réservez via WhatsApp">Reservar por WhatsApp</span>
+          <span data-es="Escribinos por WhatsApp" data-en="Message us on WhatsApp" data-fr="Écrivez-nous sur WhatsApp">Escribinos por WhatsApp</span>
         </a>
-        <span class="booking-cta-note"><span data-es="¿Preferís mail? Escribinos a" data-en="Prefer email? Write to us at" data-fr="Vous préférez le mail ? Écrivez-nous à">¿Preferís mail? Escribinos a</span> <a href="mailto:carbonediego@gmail.com">carbonediego@gmail.com</a></span>
+        <span class="booking-cta-note" style="display:block;text-align:center;margin-top:1rem"><span data-es="¿Preferís mail? Escribinos a" data-en="Prefer email? Write to us at" data-fr="Vous préférez le mail ? Écrivez-nous à">¿Preferís mail? Escribinos a</span> <a href="mailto:carbonediego@gmail.com">carbonediego@gmail.com</a></span>
       </div>
     </div>
   </div>
@@ -1252,6 +1445,9 @@
       } else {
         el.innerHTML = text;
       }
+    });
+    document.querySelectorAll('[data-ph-es]').forEach(el => {
+      el.placeholder = el.dataset['ph' + lang[0].toUpperCase() + lang[1]] || el.dataset.phEs;
     });
     applyWhatsAppMessages(lang);
     document.documentElement.lang = lang;
@@ -1372,6 +1568,85 @@
       }
     });
   });
+
+  // Formulario de reserva: manda la consulta por mail a Diego (api/send-booking.mjs).
+  // Un envío es una consulta real con datos de contacto, a diferencia del clic a WhatsApp.
+  // ADS_FORM_SEND_TO: etiqueta de la conversión "Formulario de reserva" de Google Ads
+  // ('AW-18299581753/xxxx'). Vacía = no se reporta a Ads.
+  const ADS_FORM_SEND_TO = '';
+  (function () {
+    const form = document.getElementById('bookingForm');
+    if (!form) return;
+    const $ = id => document.getElementById(id);
+    const btn = $('bf-submit');
+    const sendError = $('bf-send-error');
+
+    // La fecha arranca en hoy: nadie reserva un tour para ayer
+    const hoy = new Date();
+    $('bf-date').min = new Date(hoy.getTime() - hoy.getTimezoneOffset() * 60000).toISOString().slice(0, 10);
+
+    function mark(fieldId, errorId, on) {
+      $(fieldId).classList.toggle('bf-invalid', on);
+      $(errorId).classList.toggle('show', on);
+    }
+
+    // El aviso se va apenas se corrige el campo, sin esperar al próximo envío
+    $('bf-name').addEventListener('input', () => mark('bf-f-name', 'bf-e-name', false));
+    ['bf-email', 'bf-phone'].forEach(id =>
+      $(id).addEventListener('input', () => mark('bf-f-contact', 'bf-e-contact', false)));
+
+    form.addEventListener('submit', ev => {
+      ev.preventDefault();
+      if (btn.disabled) return;
+
+      const lang = document.documentElement.lang;
+      const name = $('bf-name').value.trim();
+      const email = $('bf-email').value.trim();
+      const phone = $('bf-phone').value.trim();
+      const emailOk = /^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email);
+      const phoneOk = phone.replace(/\D/g, '').length >= 7;
+
+      mark('bf-f-name', 'bf-e-name', name.length < 2);
+      mark('bf-f-contact', 'bf-e-contact', !(emailOk || phoneOk));
+      if (name.length < 2) { $('bf-name').focus(); return; }
+      if (!(emailOk || phoneOk)) { (email ? $('bf-email') : $('bf-phone')).focus(); return; }
+
+      sendError.classList.remove('show');
+      btn.disabled = true;
+
+      fetch('/api/send-booking', {
+        method: 'POST',
+        headers: { 'content-type': 'application/json' },
+        body: JSON.stringify({
+          name, email, phone,
+          service: $('bf-service').value,
+          date: $('bf-date').value,
+          people: $('bf-people').value,
+          message: $('bf-message').value.trim(),
+          lang,
+          website: $('bf-website').value
+        })
+      })
+        .then(r => r.ok ? r.json() : Promise.reject(r.status))
+        .then(data => {
+          if (!data || !data.ok) return Promise.reject('respuesta_invalida');
+          form.style.display = 'none';
+          $('bf-thanks').classList.add('show');
+          if (ADS_FORM_SEND_TO && typeof gtag === 'function') {
+            gtag('event', 'conversion', { send_to: ADS_FORM_SEND_TO });
+          }
+          if (typeof clarity === 'function') {
+            clarity('set', 'form_servicio', $('bf-service').value);
+            clarity('event', 'form_enviado');
+          }
+        })
+        .catch(() => {
+          btn.disabled = false;
+          sendError.classList.add('show');
+          if (typeof clarity === 'function') clarity('event', 'form_error');
+        });
+    });
+  })();
 </script>
 </body>
 </html>
