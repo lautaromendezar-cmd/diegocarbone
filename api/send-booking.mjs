@@ -76,13 +76,16 @@ export default async function handler(req, res) {
   const message  = String(body.message || '').trim().slice(0, 900);
   const lang     = ['es', 'en', 'fr'].includes(body.lang) ? body.lang : 'en';
   const service  = SERVICES[body.service] || SERVICES.otro;
+  // Desde qué página llegó (home o la página de un tour). Solo rutas propias.
+  const page     = /^\/[a-z0-9\/-]{0,60}$/i.test(String(body.page || '')) ? String(body.page) : '/';
 
   const emailOk = /^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email);
   const digits  = phone.replace(/\D/g, '');
   const phoneOk = digits.length >= 7;
 
-  // Sin un mail o un teléfono válido, Diego no tiene cómo contestar.
-  if (name.length < 2 || (!emailOk && !phoneOk)) {
+  // Sin un mail o un teléfono válido, Diego no tiene cómo contestar. El nombre es opcional
+  // desde el 8-nov (formulario más corto en las páginas de cada tour).
+  if (!emailOk && !phoneOk) {
     return res.status(400).json({ ok: false, error: 'invalid_payload' });
   }
 
@@ -91,16 +94,18 @@ export default async function handler(req, res) {
     return res.status(400).json({ ok: false, error: 'invalid_payload' });
   }
 
-  const asunto = `Consulta de reserva: ${service} — ${name}` + (date ? ` (${fechaLegible(date)})` : '');
+  const quien = name || (emailOk ? email : phone);
+  const asunto = `Consulta de reserva: ${service} — ${quien}` + (date ? ` (${fechaLegible(date)})` : '');
 
   const filas = [
-    ['Nombre', name],
+    ['Nombre', name || '—'],
     ['Servicio', service],
     ['Fecha', date ? fechaLegible(date) : '—'],
     ['Personas', people || '—'],
     ['Mail', emailOk ? email : '—'],
     ['WhatsApp / teléfono', phoneOk ? phone : '—'],
-    ['Idioma del visitante', LANGS[lang]]
+    ['Idioma del visitante', LANGS[lang]],
+    ['Página', page]
   ];
 
   // Botón para contestarle por WhatsApp sin copiar el número a mano
@@ -146,7 +151,7 @@ export default async function handler(req, res) {
     textContent: texto
   };
   // Responder el mail va directo al cliente, no al remitente técnico.
-  if (emailOk) payload.replyTo = { email, name: name };
+  if (emailOk) payload.replyTo = name ? { email, name } : { email };
 
   try {
     const r = await fetch('https://api.brevo.com/v3/smtp/email', {
@@ -165,7 +170,7 @@ export default async function handler(req, res) {
       return res.status(502).json({ ok: false, error: 'send_failed' });
     }
 
-    console.log('Consulta enviada', { service, lang, to: cfg.to.length });
+    console.log('Consulta enviada', { service, lang, page, to: cfg.to.length });
     return res.status(200).json({ ok: true });
   } catch (err) {
     console.error('Error llamando a Brevo', err);

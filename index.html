@@ -557,6 +557,19 @@
       color: var(--black);
     }
 
+    .tour-more {
+      display: inline-block;
+      margin-top: 1.1rem;
+      font-size: 0.78rem;
+      letter-spacing: 0.06em;
+      color: var(--gold);
+      text-decoration: none;
+      border-bottom: 1px solid rgba(201,169,110,0.35);
+      padding-bottom: 2px;
+      transition: color 0.2s, border-color 0.2s;
+    }
+    .tour-more:hover { color: var(--gold-light); border-color: var(--gold-light); }
+
     /* ─── WHY US ─── */
     #why {
       background: var(--black);
@@ -1119,6 +1132,7 @@
             </div>
             <a href="https://wa.me/5491144742207" data-wa="city" target="_blank" rel="noopener" class="btn-tour" data-es="Reservar este Tour" data-en="Book This Tour" data-fr="Réservez cette visite">Reservar este Tour</a>
           </div>
+          <a href="/en/city-tour" data-page="city-tour" class="tour-more" data-es="Ver el detalle del tour →" data-en="See tour details →" data-fr="Voir le détail de la visite →">Ver el detalle del tour →</a>
         </div>
       </article>
 
@@ -1140,6 +1154,7 @@
             </div>
             <a href="https://wa.me/5491144742207" data-wa="tigre" target="_blank" rel="noopener" class="btn-tour" data-es="Reservar este Tour" data-en="Book This Tour" data-fr="Réservez cette visite">Reservar este Tour</a>
           </div>
+          <a href="/en/tigre" data-page="tigre" class="tour-more" data-es="Ver el detalle del tour →" data-en="See tour details →" data-fr="Voir le détail de la visite →">Ver el detalle del tour →</a>
         </div>
       </article>
 
@@ -1160,6 +1175,7 @@
             </div>
             <a href="https://wa.me/5491144742207" data-wa="gaucho" target="_blank" rel="noopener" class="btn-tour" data-es="Reservar este Tour" data-en="Book This Tour" data-fr="Réservez cette visite">Reservar este Tour</a>
           </div>
+          <a href="/en/gaucho-day" data-page="gaucho-day" class="tour-more" data-es="Ver el detalle del tour →" data-en="See tour details →" data-fr="Voir le détail de la visite →">Ver el detalle del tour →</a>
         </div>
       </article>
 
@@ -1264,7 +1280,7 @@
       <div class="booking-form fade-up delay-1">
         <form id="bookingForm" novalidate>
           <div class="bf-field" id="bf-f-name">
-            <label for="bf-name" data-es="Tu nombre" data-en="Your name" data-fr="Votre nom">Tu nombre</label>
+            <label for="bf-name"><span data-es="Tu nombre" data-en="Your name" data-fr="Votre nom">Tu nombre</span> <span class="opt" data-es="(opcional)" data-en="(optional)" data-fr="(facultatif)">(opcional)</span></label>
             <input type="text" id="bf-name" name="name" autocomplete="name" maxlength="60" />
             <p class="bf-error" id="bf-e-name" data-es="Escribí tu nombre." data-en="Please enter your name." data-fr="Veuillez indiquer votre nom.">Escribí tu nombre.</p>
           </div>
@@ -1362,6 +1378,7 @@
       <a href="mailto:carbonediego@gmail.com">carbonediego@gmail.com</a>
       <a href="#tours">Tours</a>
       <a href="#transfers" data-es="Traslados" data-en="Transfers" data-fr="Transferts">Traslados</a>
+      <a href="/en/airport-transfer" data-page="airport-transfer" data-es="Traslados al aeropuerto: detalle" data-en="Airport transfers: details" data-fr="Transferts aéroport : détail">Traslados al aeropuerto: detalle</a>
       <a href="#booking" data-es="Reservar" data-en="Book" data-fr="Réserver">Reservar</a>
     </div>
     <p class="footer-copy"><span data-es="© 2026 Transfer Buenos Aires City. Todos los derechos reservados." data-en="© 2026 Transfer Buenos Aires City. All rights reserved." data-fr="© 2026 Transfer Buenos Aires City. Tous droits réservés.">© 2026 Transfer Buenos Aires City. Todos los derechos reservados.</span><br><span data-es="Diseño Web:" data-en="Web Design:" data-fr="Conception Web :">Diseño Web:</span> <a href="https://lautaromendez.com.ar" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='inherit'">Lautaro Mendez</a></p>
@@ -1450,6 +1467,8 @@
       el.placeholder = el.dataset['ph' + lang[0].toUpperCase() + lang[1]] || el.dataset.phEs;
     });
     applyWhatsAppMessages(lang);
+    // Links a las páginas de cada servicio, en el idioma que se está viendo
+    document.querySelectorAll('a[data-page]').forEach(a => { a.href = '/' + lang + '/' + a.dataset.page; });
     document.documentElement.lang = lang;
   }
 
@@ -1590,6 +1609,16 @@
       $(errorId).classList.toggle('show', on);
     }
 
+    // «Formulario iniciado» (Ads, secundaria): la primera vez que alguien toca un campo.
+    // Separa «nadie lo empieza» de «lo empiezan y lo abandonan».
+    let iniciado = false;
+    form.addEventListener('focusin', () => {
+      if (iniciado) return;
+      iniciado = true;
+      if (typeof gtag === 'function') gtag('event', 'conversion', { send_to: 'AW-18299581753/5R_yCPbl1bQdELnq9ZVE' });
+      if (typeof clarity === 'function') { clarity('set', 'pagina', location.pathname); clarity('event', 'form_iniciado'); }
+    });
+
     // El aviso se va apenas se corrige el campo, sin esperar al próximo envío
     $('bf-name').addEventListener('input', () => mark('bf-f-name', 'bf-e-name', false));
     ['bf-email', 'bf-phone'].forEach(id =>
@@ -1606,9 +1635,7 @@
       const emailOk = /^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email);
       const phoneOk = phone.replace(/\D/g, '').length >= 7;
 
-      mark('bf-f-name', 'bf-e-name', name.length < 2);
       mark('bf-f-contact', 'bf-e-contact', !(emailOk || phoneOk));
-      if (name.length < 2) { $('bf-name').focus(); return; }
       if (!(emailOk || phoneOk)) { (email ? $('bf-email') : $('bf-phone')).focus(); return; }
 
       sendError.classList.remove('show');
@@ -1624,6 +1651,7 @@
           people: $('bf-people').value,
           message: $('bf-message').value.trim(),
           lang,
+          page: location.pathname,
           website: $('bf-website').value
         })
       })
