@@ -661,6 +661,7 @@
     }
 
     /* ─── FORM ─── */
+    #bookingForm { scroll-margin-top: 96px; } /* que la nav fija no tape el primer campo */
     #booking {
       background: var(--black);
       position: relative;
@@ -1050,7 +1051,7 @@
     Transfer Buenos Aires
     <span data-es="Tours Privados y Traslados" data-en="Private Tours &amp; Transfers" data-fr="Visites et transferts privés">Tours Privados y Traslados</span>
   </a>
-  <a href="https://wa.me/5491144742207" data-wa="tour" target="_blank" rel="noopener" class="nav-cta" data-es="Reservar un Tour" data-en="Book a Tour" data-fr="Réservez une visite">Reservar un Tour</a>
+  <a href="#bookingForm" data-book="" class="nav-cta" data-es="Reservar un Tour" data-en="Book a Tour" data-fr="Réservez une visite">Reservar un Tour</a>
 </nav>
 
 <!-- HERO -->
@@ -1068,7 +1069,7 @@
       Descubrí el <em>Alma</em><br>de Buenos Aires
     </h1>
     <p class="hero-sub" data-es="Tours privados conducidos personalmente por su servidor.<br>Seis años creando experiencias inolvidables en la ciudad." data-en="Private tours personally guided by yours truly.<br>Six years creating unforgettable experiences in the city." data-fr="Visites privées guidées personnellement par moi-même.<br>Six ans à créer des expériences inoubliables dans la ville.">Tours privados conducidos personalmente por su servidor.<br>Seis años creando experiencias inolvidables en la ciudad.</p>
-    <a href="https://wa.me/5491144742207" data-wa="tour" target="_blank" rel="noopener" class="btn-primary" data-es="Reservar mi Tour" data-en="Book My Tour" data-fr="Réservez ma visite">Reservar mi Tour</a>
+    <a href="#bookingForm" data-book="" class="btn-primary" data-es="Reservar mi Tour" data-en="Book My Tour" data-fr="Réservez ma visite">Reservar mi Tour</a>
   </div>
   <div class="hero-dots" id="heroDots">
     <button class="hero-dot active" aria-label="Slide 1"></button>
@@ -1130,7 +1131,7 @@
               <small style="display:block;font-family:var(--sans);font-size:0.65rem;color:var(--white-dim);margin-top:0.2rem;" data-es="Max. 4 personas" data-en="Max. 4 people" data-fr="Max. 4 personnes">Max. 4 personas</small>
               <small style="display:block;font-family:var(--sans);font-size:0.62rem;color:var(--white-dim);margin-top:0.2rem;" data-es="Efectivo (Cash) · Tarjeta +12%" data-en="Cash · Credit Card +12%" data-fr="Espèces · Carte +12%">Efectivo (Cash) · Tarjeta +12%</small>
             </div>
-            <a href="https://wa.me/5491144742207" data-wa="city" target="_blank" rel="noopener" class="btn-tour" data-es="Reservar este Tour" data-en="Book This Tour" data-fr="Réservez cette visite">Reservar este Tour</a>
+            <a href="#bookingForm" data-book="city" class="btn-tour" data-es="Reservar este Tour" data-en="Book This Tour" data-fr="Réservez cette visite">Reservar este Tour</a>
           </div>
           <a href="/en/city-tour" data-page="city-tour" class="tour-more" data-es="Ver el detalle del tour →" data-en="See tour details →" data-fr="Voir le détail de la visite →">Ver el detalle del tour →</a>
         </div>
@@ -1152,7 +1153,7 @@
               <small style="display:block;font-family:var(--sans);font-size:0.65rem;color:var(--white-dim);margin-top:0.2rem;" data-es="Max. 4 personas" data-en="Max. 4 people" data-fr="Max. 4 personnes">Max. 4 personas</small>
               <small style="display:block;font-family:var(--sans);font-size:0.62rem;color:var(--white-dim);margin-top:0.2rem;" data-es="Efectivo (Cash) · Tarjeta +12%" data-en="Cash · Credit Card +12%" data-fr="Espèces · Carte +12%">Efectivo (Cash) · Tarjeta +12%</small>
             </div>
-            <a href="https://wa.me/5491144742207" data-wa="tigre" target="_blank" rel="noopener" class="btn-tour" data-es="Reservar este Tour" data-en="Book This Tour" data-fr="Réservez cette visite">Reservar este Tour</a>
+            <a href="#bookingForm" data-book="tigre" class="btn-tour" data-es="Reservar este Tour" data-en="Book This Tour" data-fr="Réservez cette visite">Reservar este Tour</a>
           </div>
           <a href="/en/tigre" data-page="tigre" class="tour-more" data-es="Ver el detalle del tour →" data-en="See tour details →" data-fr="Voir le détail de la visite →">Ver el detalle del tour →</a>
         </div>
@@ -1173,7 +1174,7 @@
               <small style="display:block;font-family:var(--sans);font-size:0.65rem;color:var(--white-dim);margin-top:0.2rem;" data-es="Max. 4 personas" data-en="Max. 4 people" data-fr="Max. 4 personnes">Max. 4 personas</small>
               <small style="display:block;font-family:var(--sans);font-size:0.62rem;color:var(--white-dim);margin-top:0.2rem;" data-es="Efectivo (Cash) · Tarjeta +12%" data-en="Cash · Credit Card +12%" data-fr="Espèces · Carte +12%">Efectivo (Cash) · Tarjeta +12%</small>
             </div>
-            <a href="https://wa.me/5491144742207" data-wa="gaucho" target="_blank" rel="noopener" class="btn-tour" data-es="Reservar este Tour" data-en="Book This Tour" data-fr="Réservez cette visite">Reservar este Tour</a>
+            <a href="#bookingForm" data-book="gaucho" class="btn-tour" data-es="Reservar este Tour" data-en="Book This Tour" data-fr="Réservez cette visite">Reservar este Tour</a>
           </div>
           <a href="/en/gaucho-day" data-page="gaucho-day" class="tour-more" data-es="Ver el detalle del tour →" data-en="See tour details →" data-fr="Voir le détail de la visite →">Ver el detalle del tour →</a>
         </div>
@@ -1218,7 +1219,7 @@
         <div class="gold-rule fade-up delay-2"></div>
         <p class="fade-up delay-2" style="font-size:0.9rem;color:var(--white-dim);line-height:1.75;max-width:340px;" data-es="También realizamos traslados privados a aeropuertos y terminal de cruceros. Tarifas fijas, sin sorpresas — de tu puerta a tu destino." data-en="We also offer private transfers to airports and the cruise terminal. Fixed rates, no surprises — from your door to your destination." data-fr="Nous assurons également des transferts privés vers les aéroports et le terminal de croisières. Tarifs fixes, sans surprises — de votre porte à votre destination.">También realizamos traslados privados a aeropuertos y terminal de cruceros. Tarifas fijas, sin sorpresas — de tu puerta a tu destino.</p>
         <br>
-        <a href="https://wa.me/5491144742207" data-wa="traslado" target="_blank" rel="noopener" class="btn-tour fade-up delay-3" data-es="Reservar un Traslado" data-en="Book a Transfer" data-fr="Réservez un transfert">Reservar un Traslado</a>
+        <a href="#bookingForm" data-book="ezeiza" class="btn-tour fade-up delay-3" data-es="Reservar un Traslado" data-en="Book a Transfer" data-fr="Réservez un transfert">Reservar un Traslado</a>
       </div>
       <div class="fade-up delay-1">
         <table class="transfer-table">
@@ -1584,6 +1585,20 @@
           'value': 1.0,
           'currency': 'ARS'
         });
+      }
+    });
+  });
+
+  // Botones «Reservar…» (8-nov): llevan al formulario de esta página con el servicio ya elegido,
+  // en vez de abrir WhatsApp. Clarity mostraba que la gente tocaba, se iba a WhatsApp y no escribía.
+  // WhatsApp sigue como alternativa debajo del formulario y en el botón flotante.
+  document.querySelectorAll('a[data-book]').forEach(a => {
+    a.addEventListener('click', () => {
+      const sel = document.getElementById('bf-service');
+      if (sel && a.dataset.book) sel.value = a.dataset.book;
+      if (typeof clarity === 'function') {
+        clarity('set', 'reservar_boton', a.dataset.book || 'general');
+        clarity('event', 'reservar_click');
       }
     });
   });
